@@ -22,4 +22,4 @@ Los datos de contacto y las integraciones se editan en el objeto `CONFIG`, al pr
 
 ## Publicación
 
-El archivo `CNAME` apunta a `geba.com.ar` para GitHub Pages.
+Publicado con GitHub Pages en https://exequielbarria.github.io/geba-sitio/. Cuando el dominio geba.com.ar esté registrado, se agrega un archivo `CNAME` con `geba.com.ar` y se configura el dominio en Settings → Pages.
