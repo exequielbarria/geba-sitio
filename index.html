@@ -1,0 +1,1101 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GEBA · Maintenance Engineering</title>
+<meta name="description" content="Ingeniería de mantenimiento para PyMEs industriales: diagnóstico, implementación y acompañamiento mensual, mantenimiento predictivo y tableros de gestión. Córdoba y alrededores.">
+<link rel="canonical" href="https://geba.com.ar/">
+<meta name="theme-color" content="#0d1317">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="GEBA">
+<meta property="og:url" content="https://geba.com.ar/">
+<meta property="og:title" content="GEBA · Maintenance Engineering">
+<meta property="og:description" content="Ordenamos el mantenimiento de tu planta, medimos la condición de tus equipos y te dejamos los indicadores para decidir. Córdoba y alrededores.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22%231e2a31%22%2F%3E%3Cg%3E%3Cg%20fill%3D%22%23ffb020%22%3E%3Crect%20x%3D%2251.47%22%20y%3D%2233.10%22%20width%3D%225.2%22%20height%3D%224.8%22%20rx%3D%221%22%20transform%3D%22rotate(99%2054.07%2035.50)%22%2F%3E%3Crect%20x%3D%2249.31%22%20y%3D%2239.75%22%20width%3D%225.2%22%20height%3D%224.8%22%20rx%3D%221%22%20transform%3D%22rotate(117%2051.91%2042.15)%22%2F%3E%3Crect%20x%3D%2245.20%22%20y%3D%2245.40%22%20width%3D%225.2%22%20height%3D%224.8%22%20rx%3D%221%22%20transform%3D%22rotate(135%2047.80%2047.80)%22%2F%3E%3Crect%20x%3D%2239.55%22%20y%3D%2249.51%22%20width%3D%225.2%22%20height%3D%224.8%22%20rx%3D%221%22%20transform%3D%22rotate(153%2042.15%2051.91)%22%2F%3E%3Crect%20x%3D%2232.90%22%20y%3D%2251.67%22%20width%3D%225.2%22%20height%3D%224.8%22%20rx%3D%221%22%20transform%3D%22rotate(171%2035.50%2054.07)%22%2F%3E%3Crect%20x%3D%2225.90%22%20y%3D%2251.67%22%20width%3D%225.2%22%20height%3D%224.8%22%20rx%3D%221%22%20transform%3D%22rotate(189%2028.50%2054.07)%22%2F%3E%3Crect%20x%3D%2219.25%22%20y%3D%2249.51%22%20width%3D%225.2%22%20height%3D%224.8%22%20rx%3D%221%22%20transform%3D%22rotate(207%2021.85%2051.91)%22%2F%3E%3Crect%20x%3D%2213.60%22%20y%3D%2245.40%22%20width%3D%225.2%22%20height%3D%224.8%22%20rx%3D%221%22%20transform%3D%22rotate(225%2016.20%2047.80)%22%2F%3E%3Crect%20x%3D%229.49%22%20y%3D%2239.75%22%20width%3D%225.2%22%20height%3D%224.8%22%20rx%3D%221%22%20transform%3D%22rotate(243%2012.09%2042.15)%22%2F%3E%3Crect%20x%3D%227.33%22%20y%3D%2233.10%22%20width%3D%225.2%22%20height%3D%224.8%22%20rx%3D%221%22%20transform%3D%22rotate(261%209.93%2035.50)%22%2F%3E%3Crect%20x%3D%227.33%22%20y%3D%2226.10%22%20width%3D%225.2%22%20height%3D%224.8%22%20rx%3D%221%22%20transform%3D%22rotate(279%209.93%2028.50)%22%2F%3E%3Crect%20x%3D%229.49%22%20y%3D%2219.45%22%20width%3D%225.2%22%20height%3D%224.8%22%20rx%3D%221%22%20transform%3D%22rotate(297%2012.09%2021.85)%22%2F%3E%3Crect%20x%3D%2213.60%22%20y%3D%2213.80%22%20width%3D%225.2%22%20height%3D%224.8%22%20rx%3D%221%22%20transform%3D%22rotate(315%2016.20%2016.20)%22%2F%3E%3Crect%20x%3D%2219.25%22%20y%3D%229.69%22%20width%3D%225.2%22%20height%3D%224.8%22%20rx%3D%221%22%20transform%3D%22rotate(333%2021.85%2012.09)%22%2F%3E%3Crect%20x%3D%2225.90%22%20y%3D%227.53%22%20width%3D%225.2%22%20height%3D%224.8%22%20rx%3D%221%22%20transform%3D%22rotate(351%2028.50%209.93)%22%2F%3E%3Crect%20x%3D%2232.90%22%20y%3D%227.53%22%20width%3D%225.2%22%20height%3D%224.8%22%20rx%3D%221%22%20transform%3D%22rotate(369%2035.50%209.93)%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M41.27%2017.16%20A17.5%2017.5%200%201%200%2049.49%2032.61%22%20fill%3D%22none%22%20stroke%3D%22%23ffb020%22%20stroke-width%3D%226.5%22%20stroke-linecap%3D%22butt%22%2F%3E%3Cpath%20d%3D%22M52.55%2032%20H38%22%20stroke%3D%22%23ffb020%22%20stroke-width%3D%226.5%22%20stroke-linecap%3D%22round%22%2F%3E%3Cg%20fill%3D%22%23e7eae5%22%3E%3Crect%20x%3D%2237.20%22%20y%3D%2230.70%22%20width%3D%222.8%22%20height%3D%222.6%22%20rx%3D%22.5%22%20transform%3D%22rotate(90%2038.60%2032.00)%22%2F%3E%3Crect%20x%3D%2235.27%22%20y%3D%2235.37%22%20width%3D%222.8%22%20height%3D%222.6%22%20rx%3D%22.5%22%20transform%3D%22rotate(135%2036.67%2036.67)%22%2F%3E%3Crect%20x%3D%2230.60%22%20y%3D%2237.30%22%20width%3D%222.8%22%20height%3D%222.6%22%20rx%3D%22.5%22%20transform%3D%22rotate(180%2032.00%2038.60)%22%2F%3E%3Crect%20x%3D%2225.93%22%20y%3D%2235.37%22%20width%3D%222.8%22%20height%3D%222.6%22%20rx%3D%22.5%22%20transform%3D%22rotate(225%2027.33%2036.67)%22%2F%3E%3Crect%20x%3D%2224.00%22%20y%3D%2230.70%22%20width%3D%222.8%22%20height%3D%222.6%22%20rx%3D%22.5%22%20transform%3D%22rotate(270%2025.40%2032.00)%22%2F%3E%3Crect%20x%3D%2225.93%22%20y%3D%2226.03%22%20width%3D%222.8%22%20height%3D%222.6%22%20rx%3D%22.5%22%20transform%3D%22rotate(315%2027.33%2027.33)%22%2F%3E%3Crect%20x%3D%2230.60%22%20y%3D%2224.10%22%20width%3D%222.8%22%20height%3D%222.6%22%20rx%3D%22.5%22%20transform%3D%22rotate(360%2032.00%2025.40)%22%2F%3E%3Crect%20x%3D%2235.27%22%20y%3D%2226.03%22%20width%3D%222.8%22%20height%3D%222.6%22%20rx%3D%22.5%22%20transform%3D%22rotate(405%2036.67%2027.33)%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%225.6%22%2F%3E%3C%2Fg%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%222.3%22%20fill%3D%22%231e2a31%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<style>
+/* =========================================================
+   TOKENS (sistema visual inspirado en kadena.solutions)
+   ========================================================= */
+@property --ang{syntax:'<angle>';initial-value:0deg;inherits:false}
+:root{
+  --acero-0:#070b0e; --acero:#0d1317; --acero-2:#151e24; --acero-3:#1e2a31;
+  --papel:#e7eae5; --hormigon:#8b979e; --hormigon-2:#5d6b73;
+  --hivis:#ffb020; --oxido:#d9552b; --verde:#4fd1a0;
+  --linea:rgba(231,234,229,.09); --linea-2:rgba(231,234,229,.16);
+  --display:"Archivo",system-ui,sans-serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --r:18px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px;overflow-x:clip}
+body{margin:0;background:var(--acero);color:var(--papel);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);margin:0;letter-spacing:-.03em;line-height:1.05;font-weight:700}
+h2{font-size:clamp(32px,4.4vw,54px)}
+h3{font-size:21px;letter-spacing:-.02em;line-height:1.2;font-weight:600}
+p{margin:0}
+.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
+.sec{padding:clamp(52px,6.5vw,84px) 0;position:relative}
+.mute{color:var(--hormigon)}
+:focus-visible{outline:2px solid var(--hivis);outline-offset:3px;border-radius:6px}
+
+/* cuadrícula de fondo */
+.grid-bg{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--linea) 1px,transparent 1px),linear-gradient(90deg,var(--linea) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 75%);opacity:.55}
+/* foto de planta de fondo */
+.photo-bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.photo-bg img{width:100%;height:100%;object-fit:cover;opacity:.16;filter:grayscale(.6) contrast(1.1)}
+.photo-bg.clear img{opacity:.42;filter:grayscale(.25) contrast(1.05)}
+.photo-bg.clear::after{background:linear-gradient(180deg,var(--acero) 0%,rgba(13,19,23,.35) 28%,rgba(13,19,23,.35) 72%,var(--acero) 100%)}
+.photo-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--acero) 0%,rgba(13,19,23,.55) 30%,rgba(13,19,23,.55) 70%,var(--acero) 100%)}
+.sec>.wrap{position:relative;z-index:1}
+
+/* encabezado de sección */
+.kicker{display:flex;flex-direction:column;align-items:center;gap:12px;font:600 11.5px/1 var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--hivis);margin-bottom:18px}
+.kicker::before{content:"";width:28px;height:2px;background:var(--hivis)}
+.kicker.left{align-items:flex-start}
+.head{text-align:center;max-width:780px;margin:0 auto 34px}
+.head p:not(.kicker){color:var(--hormigon);font-size:18px;margin-top:18px}
+.grad{background:linear-gradient(95deg,var(--hivis),var(--oxido) 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* aparición con blur (blurIn) */
+.rv{opacity:0;filter:blur(12px);transform:translateY(14px);transition:opacity .9s var(--ease),filter .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--d,0) * 90ms)}
+.rv.in{opacity:1;filter:none;transform:none}
+.intro-on .hero .rv{transition-duration:1.4s;transition-delay:calc(2.4s + var(--d,0) * 160ms)}
+
+/* =========================================================
+   INTRO: el logo gira como una tuerca que se ajusta y arma el título
+   ========================================================= */
+.intro{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:var(--acero);animation:telon 1.1s 1.95s cubic-bezier(.65,0,.35,1) forwards;cursor:pointer}
+.intro::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--linea) 1px,transparent 1px),linear-gradient(90deg,var(--linea) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(circle at 50% 50%,#000 10%,transparent 60%);mask-image:radial-gradient(circle at 50% 50%,#000 10%,transparent 60%);opacity:.6}
+.intro-in{position:relative;display:flex;align-items:center;gap:22px}
+.intro-logo{width:96px;height:96px;animation:ajuste 1.1s var(--ease) both}
+.intro-logo .hex{transform-origin:32px 32px;animation:giroTuerca 1.1s var(--ease) both}
+.intro-word{overflow:hidden}
+.intro-word b{display:flex;font:800 clamp(42px,7.4vw,76px)/1 var(--display);letter-spacing:.08em}
+.intro-word b span{display:inline-block;transform:translateY(110%);animation:sube .7s var(--ease) forwards;animation-delay:calc(.55s + var(--i) * 55ms)}
+.intro-word small{display:block;font:500 clamp(14px,2vw,17px)/1 var(--mono);letter-spacing:.42em;color:var(--hivis);margin-top:12px;opacity:0;animation:aparece .6s 1.2s var(--ease) forwards}
+@keyframes ajuste{from{opacity:0;transform:scale(.55)}to{opacity:1;transform:none}}
+@keyframes giroTuerca{from{transform:rotate(-240deg)}to{transform:rotate(0)}}
+@keyframes sube{to{transform:none}}
+@keyframes aparece{to{opacity:1}}
+@keyframes telon{to{clip-path:inset(0 0 100% 0);visibility:hidden}}
+@media (max-width:560px){.intro-in{flex-direction:column;text-align:center;gap:16px}.intro-word b{justify-content:center}}
+
+/* =========================================================
+   BOTONES (CTA con brillo giratorio)
+   ========================================================= */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:50px;padding:0 24px;border-radius:999px;font:600 15px/1 var(--sans);text-decoration:none;border:0;cursor:pointer;white-space:nowrap;transition:transform .3s var(--ease),background .3s,box-shadow .3s}
+.btn:active{transform:translateY(1px)}
+.shiny{isolation:isolate;color:var(--acero);border:1.5px solid transparent;background:conic-gradient(from var(--ang),var(--hivis) 0%,#fff1d0 8%,var(--hivis) 16%,var(--hivis) 100%) border-box;box-shadow:0 0 0 1px rgba(255,176,32,.25),0 10px 30px -10px rgba(255,176,32,.6);animation:giro 4s linear infinite;overflow:hidden}
+.shiny::before{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--hivis);z-index:-1}
+.shiny::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%) no-repeat;background-size:250% 100%;background-position:150% 0;z-index:-1}
+.shiny:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(255,176,32,.45),0 16px 40px -12px rgba(255,176,32,.8)}
+.shiny:hover::after{background-position:-50% 0;transition:background-position .9s var(--ease)}
+@keyframes giro{to{--ang:360deg}}
+.ghost{color:var(--papel);background:rgba(231,234,229,.04);box-shadow:inset 0 0 0 1px var(--linea-2)}
+.ghost:hover{background:rgba(231,234,229,.08);box-shadow:inset 0 0 0 1px rgba(231,234,229,.35)}
+.btn-sm{height:40px;padding:0 18px;font-size:14px}
+.arr{transition:transform .3s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+
+/* =========================================================
+   NAV (píldora de vidrio)
+   ========================================================= */
+.nav{position:fixed;inset:0 0 auto;z-index:60;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.solid{background:rgba(13,19,23,.78);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-color:var(--linea)}
+.nav .wrap{height:80px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:800 21px/1 var(--display);letter-spacing:.08em}
+.brand svg{flex:none;transform-style:preserve-3d;animation:logoGiro 6s linear infinite}
+@keyframes logoGiro{0%,75%{transform:perspective(380px) rotateY(0);animation-timing-function:cubic-bezier(.45,0,.55,1)}100%{transform:perspective(380px) rotateY(-360deg)}}
+.brand small{display:block;font:500 11px/1.3 var(--mono);letter-spacing:.2em;color:var(--hivis);text-transform:uppercase;margin-top:4px}
+.pill{display:flex;gap:2px;padding:4px;border-radius:999px;background:rgba(21,30,36,.7);box-shadow:inset 0 0 0 1px var(--linea);backdrop-filter:blur(10px)}
+.pill a{position:relative;padding:10px 16px;border-radius:999px;font:500 16px/1 var(--sans);color:var(--hormigon);text-decoration:none;transition:color .25s,background .25s}
+.pill a:hover{color:var(--papel)}
+.pill a.on{color:var(--hivis);background:rgba(255,176,32,.1)}
+.pill a.on::after{content:"";position:absolute;left:50%;bottom:3px;width:4px;height:4px;border-radius:50%;background:var(--hivis);transform:translateX(-50%)}
+.nav .cta{justify-self:end;margin-right:38px}
+.burger{display:none;justify-self:end;background:none;border:0;color:var(--papel);padding:8px;cursor:pointer}
+.pill .mob{display:none}
+@media (max-width:1100px){.pill a{padding:10px 12px}}
+@media (max-width:980px){
+  .nav .wrap{grid-template-columns:1fr auto}
+  .nav .cta{display:none}
+  .burger{display:block}
+  .pill{position:fixed;top:88px;left:16px;right:16px;flex-direction:column;border-radius:18px;padding:10px;background:rgba(13,19,23,.97);opacity:0;visibility:hidden;transform:translateY(-8px);transition:.3s var(--ease)}
+  .pill.open{opacity:1;visibility:visible;transform:none}
+  .pill a{padding:14px 16px;font-size:16px}
+  .pill a.on::after{display:none}
+  .pill .mob{display:flex;margin-top:8px;width:100%}
+}
+
+/* =========================================================
+   HERO (texto a la izquierda, idea a la derecha)
+   ========================================================= */
+.hero{position:relative;padding:140px 0 72px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.32;pointer-events:none}
+.blob.a{width:520px;height:520px;background:#b8741a;top:-160px;left:-120px;animation:blobA 18s ease-in-out infinite alternate}
+.blob.b{width:460px;height:460px;background:#7a2f18;bottom:-160px;right:-140px;animation:blobB 22s ease-in-out infinite alternate}
+@keyframes blobA{to{transform:translate(120px,80px) scale(1.15)}}
+@keyframes blobB{to{transform:translate(-100px,-80px) scale(.9)}}
+.net{position:absolute;inset:0;pointer-events:none;background-color:var(--acero-0);background-image:radial-gradient(rgba(231,234,229,.03) .7px,transparent .7px);background-size:28px 28px}
+.net canvas{display:block;width:100%;height:100%}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 440px;grid-template-areas:"hh img" "ld img" "hc img" "sp img";column-gap:56px;align-items:start}
+.hh{grid-area:hh}.hero .lead{grid-area:ld}.hc{grid-area:hc}.hero .idea{grid-area:img}
+.hc .pillars{grid-area:auto}
+@media (max-width:1180px){.hero .wrap{grid-template-columns:minmax(0,1fr) 380px;column-gap:40px}}
+@media (max-width:980px){.hero .wrap{grid-template-columns:1fr;grid-template-areas:"hh" "ld" "hc" "img"}.hero{padding-top:120px}.hero .idea{margin-top:40px}}
+.hero h1{font-size:clamp(36px,4.4vw,56px);font-weight:700;letter-spacing:-.045em;line-height:1.02}
+.hero h1 .ln{display:block;min-height:1.02em}
+#tw1{background:linear-gradient(#b5121b,#b5121b);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .l2{display:block;width:fit-content;min-height:1.02em;background:linear-gradient(var(--hivis),var(--hivis));-webkit-background-clip:text;background-clip:text;color:transparent}
+.caret{display:inline-block;width:.08em;height:.85em;margin-left:.06em;margin-right:-.14em;background:var(--hivis);vertical-align:-.06em;animation:parpadeo 1s steps(1) infinite}
+@keyframes parpadeo{50%{opacity:0}}
+.hero .lead{max-width:600px;margin-top:12px;font-size:18.5px;color:#b9c2c6}
+.pl .dot svg{width:14px;height:14px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero .micro{font:500 12px/1.5 var(--mono);letter-spacing:.06em;color:var(--hormigon-2);margin-top:16px}
+.pillars{margin-top:22px;padding-top:16px;border-top:1px solid var(--linea);max-width:640px}
+.pl-k{font:500 10px/1.3 var(--mono);letter-spacing:.18em;color:var(--hormigon);text-transform:uppercase;margin-bottom:12px}
+.pl-row{display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;gap:10px 14px}
+.pl>div{min-width:0}
+.pl{display:flex;align-items:center;gap:10px}
+.pl .dot{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--acero);box-shadow:inset 0 0 0 1px var(--hormigon-2);color:var(--hormigon);animation:nodo 8s infinite;animation-delay:calc(var(--i) * 2s)}
+.pl b{display:block;font:600 13.5px/1.2 var(--display);letter-spacing:-.01em;white-space:nowrap}
+.pl span:not(.dot){display:block;font:500 9px/1.3 var(--mono);letter-spacing:.1em;color:var(--oxido);text-transform:uppercase;margin-top:3px}
+@media (max-width:700px){.pl-row{grid-template-columns:1fr 1fr;gap:14px 18px}}
+@media (max-width:380px){.pl-row{grid-template-columns:1fr}}
+
+/* panel de la idea: foto de planta + recorrido animado */
+.idea{position:relative;border-radius:24px;overflow:hidden;min-height:480px;box-shadow:inset 0 0 0 1px var(--linea-2),0 40px 90px -40px #000;isolation:isolate}
+.idea>img,.idea>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:saturate(.7) contrast(1.05);animation:kenburns 24s ease-in-out infinite alternate}
+@keyframes kenburns{to{transform:scale(1.12) translate(-3%,-2%)}}
+.idea>video{animation:none;filter:none;background:#070b0e;object-fit:contain}
+.idea:has(>video)::before{background:none}
+.idea::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(200deg,rgba(13,19,23,.15),rgba(13,19,23,.55) 45%,rgba(13,19,23,.93) 85%)}
+.idea .scan{position:absolute;left:0;right:0;height:2px;top:0;z-index:0;background:linear-gradient(90deg,transparent,var(--hivis),transparent);opacity:.55;animation:escaneo 5s ease-in-out infinite}
+@keyframes escaneo{0%{top:8%}50%{top:62%}100%{top:8%}}
+.idea .lbl{position:absolute;top:22px;left:22px;font:500 11px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--papel);background:rgba(13,19,23,.7);backdrop-filter:blur(8px);padding:8px 11px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--linea-2)}
+.idea .lbl i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--verde);margin-right:8px;box-shadow:0 0 0 3px rgba(79,209,160,.2);animation:parpadeo 2s infinite}
+.flow{position:absolute;left:50%;transform:translateX(-50%);width:calc((100% - 36px) * .75);bottom:18px;background:rgba(13,19,23,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:18px;padding:20px 22px;box-shadow:inset 0 0 0 1px var(--linea-2)}
+.flow-top{font:500 11px/1 var(--mono);letter-spacing:.2em;color:var(--hormigon);text-transform:uppercase;margin-bottom:18px}
+.nodes{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.nodes::before{content:"";position:absolute;top:19px;left:12.5%;right:12.5%;height:1px;background:var(--linea-2)}
+.node{position:relative;text-align:center;padding:0 4px}
+.node .dot{position:relative;z-index:1;width:40px;height:40px;margin:0 auto 10px;border-radius:50%;display:grid;place-items:center;background:var(--acero);box-shadow:inset 0 0 0 1px var(--hormigon-2);color:var(--hormigon);animation:nodo 8s infinite;animation-delay:calc(var(--i) * 2s)}
+.node .seg{position:absolute;top:19px;left:50%;width:100%;height:2px;background:linear-gradient(90deg,var(--hivis),var(--oxido));transform-origin:left;transform:scaleX(0);animation:tramo 8s infinite;animation-delay:calc(var(--i) * 2s)}
+.node:last-child .seg{display:none}
+@keyframes nodo{0%,2%{background:var(--acero);color:var(--hormigon)}6%,22%{background:var(--hivis);color:var(--acero);box-shadow:0 0 0 6px rgba(255,176,32,.15)}30%,100%{background:var(--acero);color:var(--hormigon)}}
+@keyframes tramo{0%,8%{transform:scaleX(0);opacity:1}25%{transform:scaleX(1);opacity:1}34%,100%{transform:scaleX(1);opacity:0}}
+.node b{display:block;font:600 12.5px/1.25 var(--sans)}
+.node em{display:block;font-style:normal;font-size:11px;color:var(--hormigon);margin-top:2px;line-height:1.3}
+@media (max-width:560px){.flow{width:calc(100% - 36px)}.idea{min-height:460px}.nodes{grid-template-columns:1fr 1fr;row-gap:16px}.nodes::before,.node .seg{display:none}}
+
+/* cinta de técnicas */
+.marquee{border-block:1px solid var(--linea);overflow:hidden;padding:18px 0;background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(231,234,229,.02) 14px 15px);animation:trama 20s linear infinite}
+@keyframes trama{to{background-position-x:200px}}
+.mq{display:flex;width:max-content;animation:mq 40s linear infinite}
+.mq span{font:500 13px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--hormigon);display:flex;align-items:center;gap:48px;padding-right:48px;white-space:nowrap}
+.mq span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--oxido)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* =========================================================
+   PROBLEMA
+   ========================================================= */
+.probs{display:grid;grid-template-columns:repeat(3,1fr);border-radius:var(--r);overflow:hidden;background:rgba(21,30,36,.85);backdrop-filter:blur(6px);box-shadow:inset 0 0 0 1px var(--linea)}
+.prob{padding:24px 28px;border-right:1px solid var(--linea);position:relative;transition:background .3s}
+.prob:last-child{border-right:0}
+.prob:hover{background:var(--acero-3)}
+.prob::before{content:"";position:absolute;left:0;top:26px;width:2px;height:18px;background:var(--oxido);transition:height .4s var(--ease)}
+.prob:hover::before{height:46px}
+.prob small{font:500 11.5px/1 var(--mono);letter-spacing:.2em;color:var(--hormigon);text-transform:uppercase}
+.prob p{margin-top:12px;color:#c9d0d2;font-size:15.5px}
+@media (max-width:860px){.probs{grid-template-columns:1fr}.prob{border-right:0;border-bottom:1px solid var(--linea)}.prob:last-child{border-bottom:0}}
+
+/* =========================================================
+   SERVICIOS: diagnosticar · implementar · sostener
+   ========================================================= */
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:960px){.modes{grid-template-columns:1fr}}
+.card{position:relative;border-radius:var(--r);background:var(--acero-2);box-shadow:inset 0 0 0 1px var(--linea);padding:28px;overflow:hidden;transition:transform .5s var(--ease),box-shadow .4s;display:flex;flex-direction:column}
+.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(255,176,32,.09),transparent 45%);opacity:0;transition:opacity .4s}
+.card:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1px rgba(255,176,32,.3)}
+.card:hover::after{opacity:1}
+.card.feat{background:linear-gradient(180deg,rgba(255,176,32,.07),transparent 40%),var(--acero-2);box-shadow:inset 0 0 0 1px rgba(255,176,32,.28)}
+.step-k{font:600 12px/1 var(--mono);letter-spacing:.2em;color:var(--hivis);text-transform:uppercase}
+.card h3{font-size:24px;margin-top:14px}
+.card>p{color:var(--hormigon);margin-top:10px;font-size:15.5px}
+.list{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:9px;font-size:15px;color:#c9d0d2}
+.list li{display:flex;gap:10px}
+.list li::before{content:"";flex:none;width:6px;height:6px;margin-top:9px;border-radius:2px;background:var(--hivis)}
+.card .go{margin-top:auto;padding-top:22px;font-weight:600;font-size:14.5px;color:var(--hivis);text-decoration:none}
+.card .go:hover .arr{transform:translateX(4px)}
+.card .go .arr{display:inline-block}
+.areas{margin-top:0;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border-radius:var(--r);overflow:hidden;background:var(--linea);box-shadow:inset 0 0 0 1px var(--linea)}
+@media (max-width:860px){.areas{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.areas{grid-template-columns:1fr}}
+.area{position:relative;isolation:isolate;overflow:hidden;background:var(--acero-2);padding:24px;display:flex;flex-direction:column;gap:14px;transition:background .3s}
+.area .abg{position:absolute;inset:-8%;z-index:-2;background-size:cover;background-position:center;opacity:.2;filter:grayscale(.75) contrast(1.05);transform:translate(var(--px,0px),var(--py,0px)) scale(1.04);transition:opacity .6s var(--ease),filter .6s var(--ease),transform .9s var(--ease)}
+.area::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(160deg,rgba(21,30,36,.55) 0%,rgba(21,30,36,.8) 55%,rgba(21,30,36,.95) 100%);transition:background .6s var(--ease)}
+.area::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(255,176,32,.16),transparent 60%);opacity:0;transition:opacity .4s}
+.area:hover .abg{opacity:.55;filter:grayscale(0) contrast(1.05);transform:translate(var(--px,0px),var(--py,0px)) scale(1.12)}
+.area:hover::before{background:linear-gradient(160deg,rgba(13,19,23,.25) 0%,rgba(13,19,23,.65) 55%,rgba(13,19,23,.92) 100%)}
+.area:hover::after{opacity:1}
+@media (hover:none){.area .abg{opacity:.35;filter:grayscale(.3)}}
+.area-h{display:flex;gap:14px;align-items:center}
+.area:hover{background:var(--acero-2)}
+.area .ico{flex:none;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:rgba(255,176,32,.08);box-shadow:inset 0 0 0 1px rgba(255,176,32,.2);color:var(--hivis)}
+.area .ico [pathLength]{stroke-dasharray:1;stroke-dashoffset:0}
+.area:hover .ico [pathLength]{animation:dibuja .9s var(--ease) both}
+@keyframes dibuja{from{stroke-dashoffset:1}}
+.area b{display:block;font:600 17px/1.25 var(--display);letter-spacing:-.01em}
+.area .tools{display:flex;flex-wrap:wrap;gap:6px}
+.area .tools span{font:500 12px/1 var(--mono);padding:7px 9px;border-radius:999px;background:var(--acero);box-shadow:inset 0 0 0 1px var(--linea-2);color:#cfd5d6;transition:.25s}
+.area:hover .tools span{box-shadow:inset 0 0 0 1px rgba(255,176,32,.25)}
+.areas-h{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin:56px 0 18px}
+.areas-h h3{font-size:clamp(24px,2.6vw,32px)}
+.areas-h p{color:var(--hormigon);max-width:52ch;font-size:15.5px}
+
+/* =========================================================
+   PREDICTIVO (tarjetas con foto)
+   ========================================================= */
+.carousel{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.track{display:flex;gap:14px;width:max-content;animation:carrusel 38s linear infinite}
+.carousel:hover .track,.carousel:focus-within .track{animation-play-state:paused}
+@keyframes carrusel{to{transform:translateX(calc(-50% - 7px))}}
+.track>.ph,.track>.brandcard{width:360px;flex:none}
+@media (max-width:560px){.track>.ph,.track>.brandcard{width:82vw}}
+.brandcard{position:relative;min-height:380px;border-radius:var(--r);overflow:hidden;padding:28px;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(420px circle at 80% 0%,rgba(255,176,32,.07),transparent 60%),radial-gradient(380px circle at 0% 100%,rgba(217,85,43,.06),transparent 60%),var(--acero-0);box-shadow:inset 0 0 0 1px rgba(255,176,32,.18)}
+.brandcard::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--linea) 1px,transparent 1px),linear-gradient(90deg,var(--linea) 1px,transparent 1px);background-size:28px 28px;-webkit-mask-image:radial-gradient(circle at 50% 40%,#000,transparent 75%);mask-image:radial-gradient(circle at 50% 40%,#000,transparent 75%);pointer-events:none}
+.brandcard>*{position:relative}
+.brandcard .bc-logo{width:84px;height:84px;filter:drop-shadow(0 12px 24px rgba(255,176,32,.25));animation:flotaLogo 5s ease-in-out infinite}
+@keyframes flotaLogo{50%{transform:translateY(-8px)}}
+.brandcard b{display:block;font:800 34px/1 var(--display);letter-spacing:.08em;margin-top:22px}
+.brandcard small{display:block;font:500 12px/1 var(--mono);letter-spacing:.28em;color:var(--hivis);margin-top:10px}
+.brandcard p{color:#c3cbce;font-size:15px;margin-top:18px}
+.brandcard .btn{align-self:flex-start;margin-top:22px}
+@media (prefers-reduced-motion:reduce){.carousel{overflow-x:auto;-webkit-mask-image:none;mask-image:none}}
+.ph{position:relative;min-height:380px;border-radius:var(--r);overflow:hidden;box-shadow:inset 0 0 0 1px var(--linea);isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;padding:26px;background:var(--acero-2)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:saturate(.85) contrast(1.05);transition:transform 1.2s var(--ease),filter .6s}
+.ph::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,19,23,.1) 0%,rgba(13,19,23,.55) 40%,rgba(13,19,23,.96) 78%)}
+.ph:hover img{transform:scale(1.07);filter:saturate(1) contrast(1.05)}
+.ph .n{position:absolute;top:20px;left:22px;font:600 12px/1 var(--mono);letter-spacing:.18em;color:var(--hivis);background:rgba(13,19,23,.75);backdrop-filter:blur(6px);padding:7px 10px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(255,176,32,.3)}
+.ph .cert{position:absolute;top:20px;right:20px;display:flex;align-items:center;gap:7px;font:600 11px/1.25 var(--mono);letter-spacing:.04em;color:var(--acero);background:var(--hivis);padding:7px 11px 7px 8px;border-radius:999px;box-shadow:0 10px 24px -10px rgba(255,176,32,.7);max-width:calc(100% - 90px)}
+.ph .cert svg{flex:none}
+.ph h3{font-size:26px}
+#predictivo .ph img{filter:grayscale(.6) brightness(.5)}
+#predictivo .ph:hover img,#predictivo .ph:focus-within img{filter:grayscale(.35) brightness(.7)}
+#predictivo .ph>:not(img):not(.ph-soon){opacity:.6;transition:opacity .4s}
+#predictivo .ph:hover>:not(img):not(.ph-soon){opacity:.85}
+.ph-soon{position:absolute;left:50%;top:32%;transform:translate(-50%,-50%) rotate(-8deg);font:700 13px/1 var(--mono);letter-spacing:.32em;text-transform:uppercase;color:var(--papel);padding:10px 16px 10px 20px;border-radius:999px;background:rgba(7,11,14,.72);box-shadow:inset 0 0 0 1px rgba(231,234,229,.25);backdrop-filter:blur(4px);white-space:nowrap}
+.soon-tag{display:inline-flex;align-items:center;gap:8px;margin:0 auto 16px;font:600 11px/1 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--hormigon);padding:8px 13px;border-radius:999px;background:rgba(231,234,229,.05);box-shadow:inset 0 0 0 1px var(--linea-2)}
+.soon-tag i{width:7px;height:7px;border-radius:50%;background:var(--hormigon);animation:latidoSoon 2s ease-in-out infinite}
+@keyframes latidoSoon{50%{opacity:.25}}
+#predictivo .head h2,#predictivo .head p:not(.kicker){opacity:.7}
+.ph>p{color:#c3cbce;font-size:15px;margin-top:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.chips span{font:500 12px/1 var(--mono);padding:7px 9px;border-radius:999px;background:rgba(13,19,23,.6);box-shadow:inset 0 0 0 1px var(--linea-2);color:#d6dcdd;backdrop-filter:blur(6px)}
+.more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s var(--ease)}
+.more>div{overflow:hidden}
+.ph:hover .more,.ph:focus-within .more,.ph:focus .more{grid-template-rows:1fr}
+.more p{font-size:14px;margin-top:14px;padding-top:14px;border-top:1px solid var(--linea-2);color:#c3cbce}
+.more p b{color:var(--hivis);font:600 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;display:block;margin-bottom:6px}
+@media (hover:none){.more{grid-template-rows:1fr}}
+
+/* =========================================================
+   TABLEROS
+   ========================================================= */
+.dash{display:grid;grid-template-columns:415px minmax(0,1fr);gap:36px;align-items:center}
+@media (max-width:960px){.dash{grid-template-columns:1fr}}
+/* dock de herramientas (calcado de Kadena, en vertical) */
+.dock{list-style:none;margin:0;display:flex;flex-direction:column;align-items:center;gap:10px;padding:10px;border-radius:1.45rem;background:rgba(21,30,36,.7);box-shadow:0 24px 60px -24px rgba(0,0,0,.9),inset 0 0 0 1px rgba(231,234,229,.1);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
+.dock-item{position:relative;display:flex;align-items:center;transition:margin .24s cubic-bezier(.2,.9,.2,1)}
+.dock-bubble{position:relative;display:flex;align-items:center;justify-content:center;width:2.7rem;height:2.7rem;overflow:hidden;border-radius:.83rem;border:1px solid hsla(96,11%,91%,.1);background:linear-gradient(180deg,hsla(96,11%,91%,.09),hsla(96,11%,91%,.025));box-shadow:0 4px 12px rgba(0,0,0,.3),inset 0 1px 0 hsla(96,11%,91%,.12);transform-origin:center;transition:transform .24s cubic-bezier(.2,.9,.2,1),box-shadow .24s ease-out;will-change:transform}
+.dock-bubble::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,hsla(96,11%,91%,.16),transparent 55%);opacity:.6;transition:opacity .2s ease-out}
+.dock-bubble-mas{border-style:dashed;border-color:hsla(96,11%,91%,.18);background:none;box-shadow:none;color:rgba(231,234,229,.7)}
+.dock-bubble-mas::after{content:none}
+.dock-img{width:60%;height:60%;object-fit:contain}
+.dock-tip{position:absolute;right:calc(100% + 15px);top:50%;white-space:nowrap;border-radius:8px;background:var(--acero-3);padding:6px 10px;font:500 11px/1 var(--mono);color:var(--papel);box-shadow:0 10px 24px rgba(0,0,0,.4),inset 0 0 0 1px rgba(231,234,229,.15);pointer-events:none;opacity:0;transform:translate(4px,-50%);transition:opacity .16s ease-out,transform .16s ease-out}
+@media (hover:hover){
+  .dock-item:has(+.dock-item+.dock-item:hover) .dock-bubble,.dock-item:hover+.dock-item+.dock-item .dock-bubble{transform:scale(1.1)}
+  .dock-item:has(+.dock-item:hover) .dock-bubble,.dock-item:hover+.dock-item .dock-bubble{transform:scale(1.26)}
+  .dock-item:has(+.dock-item:hover),.dock-item:hover+.dock-item{margin-block:3px}
+  .dock-item:hover{margin-block:8px}
+  .dock-item:hover .dock-bubble{transform:scale(1.5);box-shadow:0 14px 34px rgba(0,0,0,.45),inset 0 1px 0 hsla(96,11%,91%,.22)}
+  .dock-item:hover .dock-bubble::after{opacity:1}
+  .dock-item:hover .dock-bubble-mas{box-shadow:none;border-color:rgba(255,176,32,.5)}
+  .dock-item:hover .dock-tip{opacity:1;transform:translate(-4px,-50%)}
+}
+@media (max-width:960px){.dock{flex-direction:row;flex-wrap:wrap;justify-content:center;justify-self:center}.dock-tip{right:auto;left:50%;top:auto;bottom:calc(100% + 14px);transform:translate(-50%,4px)}.dock-item:hover .dock-tip{transform:translate(-50%,-4px)}.dock-item:hover,.dock-item:has(+.dock-item:hover),.dock-item:hover+.dock-item{margin-block:0}}
+@media (prefers-reduced-motion:reduce){.dock-bubble,.dock-bubble::after,.dock-tip,.dock-item{transition:none}}
+/* captura de Power BI Desktop con el tablero dentro del lienzo */
+.pbi{position:relative;aspect-ratio:1177/769;background:#fff}
+.pbi>img{position:absolute;display:block}
+.pbi .pbi-ui{inset:0;width:100%;height:100%}
+.pbi .pbi-page{left:3.653%;top:1.17%;width:89.125%;height:93.628%;object-fit:fill;background:#f7f7f7;box-shadow:0 0 0 1px rgba(0,0,0,.06),0 6px 18px -8px rgba(0,0,0,.25)}
+.dash h2{font-size:clamp(32px,4vw,48px)}
+/* herramientas + captura corridas 2 cm (76 px) a la derecha cuando hay margen */
+.tc{display:flex;gap:28px;align-items:center}
+.tc .screen{flex:0 1 525px;min-width:0}
+/* herramientas + captura corridas 2 cm (76 px) a la derecha cuando hay margen */
+@media (min-width:1330px){.tcol{position:relative;left:76px}}
+@media (max-width:960px){.tc{flex-direction:column;align-items:center}.tc .screen{width:100%}}
+.dash .txt>p:not(.kicker){color:var(--hormigon);font-size:17px;margin-top:18px}
+.kpis{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.kpis span{font:500 13px/1 var(--mono);padding:9px 12px;border-radius:999px;background:var(--acero-2);box-shadow:inset 0 0 0 1px var(--linea);color:#d0d6d7;transition:.3s}
+.kpis span:hover{color:var(--hivis);box-shadow:inset 0 0 0 1px rgba(255,176,32,.4)}
+.screen{perspective:1400px}
+.frame{border-radius:16px;background:var(--acero-3);box-shadow:inset 0 0 0 1px var(--linea-2),0 50px 90px -40px #000,0 0 0 8px rgba(30,42,49,.4);transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .5s var(--ease);overflow:hidden}
+.frame .bar{display:flex;align-items:center;gap:6px;padding:11px 14px;border-bottom:1px solid var(--linea)}
+.frame .bar i{width:9px;height:9px;border-radius:50%;background:rgba(231,234,229,.16)}
+.frame .bar span{margin-left:10px;font:500 11.5px/1 var(--mono);color:var(--hormigon)}
+.frame img{width:100%;background:#fff}
+.frame .pbi .pbi-ui{width:100%}
+.frame .pbi .pbi-page{width:89.125%}
+.note{font:500 11.5px/1.4 var(--mono);color:var(--hormigon-2);margin-top:14px}
+
+/* =========================================================
+   EQUIPO (foto circular + resumen, como el portfolio)
+   ========================================================= */
+.person{display:grid;grid-template-columns:320px 1fr;gap:64px;align-items:center}
+.person+.person{margin-top:64px}
+.person.rev{grid-template-columns:1fr 320px}
+.person.rev .photo{order:2}
+@media (max-width:960px){.person,.person.rev{grid-template-columns:1fr;gap:36px}.person.rev .photo{order:0}}
+/* alineación fina de los perfiles (con el contenedor a ancho completo) */
+@media (min-width:1192px){#equipo .person:not(.rev){padding-left:72px}#equipo .person.rev{grid-template-columns:684px 320px}}
+.photo{position:relative;width:min(320px,100% - 28px);aspect-ratio:1;margin:0 auto}
+.photo .ring{position:absolute;inset:-14px;border-radius:50%;border:1.5px dashed rgba(255,176,32,.35);animation:rota 40s linear infinite}
+.photo .ring::after{content:"";position:absolute;top:50%;left:-6px;width:11px;height:11px;border-radius:50%;background:var(--hivis);box-shadow:0 0 16px var(--hivis)}
+@keyframes rota{to{transform:rotate(360deg)}}
+.photo .face{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:#e9ecef;box-shadow:inset 0 0 0 1px var(--linea-2),0 30px 70px -30px #000}
+.photo .face img{position:relative;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.photo .ini{position:absolute;inset:0;display:grid;place-items:center;font:700 96px/1 var(--display);color:var(--hormigon-2);letter-spacing:-.04em;background:radial-gradient(circle at 30% 20%,var(--acero-3),var(--acero-2))}
+.who .role{font:500 13px/1.4 var(--mono);color:var(--hivis);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.who h3{font-size:clamp(30px,3.6vw,42px);letter-spacing:-.035em;line-height:1.05}
+.who>p:not(.role){color:#c3cbce;margin-top:16px;font-size:16.5px;max-width:62ch}
+.who .does{margin-top:16px;padding:14px 16px;border-radius:12px;background:rgba(255,176,32,.06);box-shadow:inset 0 0 0 1px rgba(255,176,32,.22);font-size:15px;color:#d9dfe0;max-width:62ch}
+.who .does b{color:var(--hivis);font:600 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;display:block;margin-bottom:6px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px}
+.tags span{font:500 12px/1 var(--mono);padding:7px 10px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--linea-2);color:#c3cbce}
+
+/* =========================================================
+   AUTODIAGNÓSTICO
+   ========================================================= */
+.quiz{display:grid;grid-template-columns:1.25fr .75fr;gap:14px;align-items:stretch}
+@media (max-width:960px){.quiz{grid-template-columns:1fr}.score{order:-1}}
+.qs{background:var(--acero-2);border-radius:var(--r);box-shadow:inset 0 0 0 1px var(--linea);padding:10px 26px}
+.q{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--linea)}
+.q:last-child{border-bottom:0}
+.q p{font-size:15px;font-weight:500}
+.seg{display:flex;padding:3px;border-radius:999px;background:var(--acero);box-shadow:inset 0 0 0 1px var(--linea)}
+.seg label{position:relative}
+.seg input{position:absolute;inset:0;opacity:0;cursor:pointer;margin:0}
+.seg span{display:block;padding:8px 13px;border-radius:999px;font:600 12.5px/1 var(--sans);color:var(--hormigon);transition:.25s}
+.seg input:checked+span{background:var(--hivis);color:var(--acero)}
+.seg input:focus-visible+span{outline:2px solid var(--hivis);outline-offset:2px}
+@media (max-width:560px){.q{grid-template-columns:1fr;gap:10px}.seg{justify-self:start}.qs{padding:6px 18px}}
+.score{border-radius:var(--r);padding:30px;background:radial-gradient(500px circle at 100% 0%,rgba(217,85,43,.18),transparent 60%),var(--acero-3);box-shadow:inset 0 0 0 1px var(--linea-2);display:flex;flex-direction:column}
+.score small{font:500 11px/1 var(--mono);letter-spacing:.2em;color:var(--hormigon);text-transform:uppercase}
+.gauge{height:8px;border-radius:99px;background:rgba(231,234,229,.08);margin:18px 0 8px;overflow:hidden}
+.gauge i{display:block;height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,var(--oxido),var(--hivis));transition:width .7s var(--ease)}
+.lvls{display:flex;justify-content:space-between;font:500 10.5px var(--mono);color:var(--hormigon-2)}
+.score h3{color:var(--hivis);margin-top:18px;font-size:26px}
+.score p{color:#c3cbce;font-size:15px;margin-top:8px}
+.score .btn{margin-top:auto;width:100%}
+.score .pend{font:500 12px var(--mono);color:var(--hormigon-2);margin:12px 0 18px}
+
+/* =========================================================
+   CONTACTO
+   ========================================================= */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+@media (max-width:960px){.contact{grid-template-columns:1fr;gap:40px}}
+.contact h2{font-size:clamp(34px,4.4vw,52px)}
+.contact .lead{color:var(--hormigon);font-size:17px;margin-top:18px}
+.checks{list-style:none;padding:0;margin:26px 0;display:grid;gap:10px;color:#c9d0d2}
+.checks li{display:flex;gap:10px}
+.checks li::before{content:"✓";color:var(--verde);font-weight:700}
+.links{display:grid;gap:8px}
+.lk{display:flex;align-items:center;gap:14px;padding:13px 16px;border-radius:14px;text-decoration:none;background:rgba(21,30,36,.9);box-shadow:inset 0 0 0 1px var(--linea);transition:.3s var(--ease)}
+.lk:hover{box-shadow:inset 0 0 0 1px rgba(255,176,32,.4);transform:translateX(4px)}
+.lk .i{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:var(--acero-3);flex:none;color:var(--hivis)}
+.lk b{display:block;font-size:15px}.lk small{color:var(--hormigon);font-size:13.5px}
+.lk .arr{margin-left:auto;color:var(--hormigon)}
+.agenda{margin-top:12px;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:16px;border-radius:14px;background:linear-gradient(120deg,rgba(255,176,32,.12),rgba(217,85,43,.08)),rgba(13,19,23,.8);box-shadow:inset 0 0 0 1px rgba(255,176,32,.35)}
+.agenda .i{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(255,176,32,.15);color:var(--hivis)}
+.agenda b{display:block;font-size:15px}.agenda small{color:var(--hormigon);font-size:13.5px}
+@media (max-width:520px){.agenda{grid-template-columns:auto 1fr}.agenda .btn{grid-column:1/-1}}
+.form{background:rgba(21,30,36,.94);backdrop-filter:blur(10px);border-radius:22px;padding:32px;box-shadow:inset 0 0 0 1px var(--linea-2),0 40px 80px -40px #000}
+.form h3{font-size:24px}
+.form .sub{color:var(--hormigon);font-size:14px;margin-top:6px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:560px){.row2{grid-template-columns:1fr}.form{padding:24px}}
+.fld{margin-top:16px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.fld label,.fld legend{display:block;font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--hormigon);margin-bottom:8px;padding:0}
+.fld input,.fld textarea{width:100%;padding:13px 14px;border-radius:12px;border:0;background:var(--acero);box-shadow:inset 0 0 0 1px var(--linea-2);color:var(--papel);font:15px var(--sans);transition:box-shadow .25s}
+.fld input::placeholder,.fld textarea::placeholder{color:var(--hormigon-2)}
+.fld textarea{min-height:104px;resize:vertical}
+.fld input:focus,.fld textarea:focus{outline:none;box-shadow:inset 0 0 0 1.5px var(--hivis)}
+.fld.bad input,.fld.bad textarea{box-shadow:inset 0 0 0 1.5px var(--oxido)}
+.err{display:none;color:#ff8a65;font-size:12.5px;margin-top:6px}
+.fld.bad .err{display:block}
+.pick{display:flex;flex-wrap:wrap;gap:6px}
+.fld .pick label{position:relative;margin:0;text-transform:none;letter-spacing:0;font:inherit}
+.pick input{position:absolute;opacity:0}
+.pick span{display:inline-block;padding:9px 13px;border-radius:999px;font:500 13.5px/1 var(--sans);color:#c9d0d2;background:var(--acero);box-shadow:inset 0 0 0 1px var(--linea-2);cursor:pointer;transition:.25s}
+.pick input:checked+span{background:var(--hivis);color:var(--acero);box-shadow:none}
+.pick input:focus-visible+span{outline:2px solid var(--hivis);outline-offset:2px}
+.form .btn{width:100%;margin-top:22px}
+.fnote{font:500 11.5px/1.4 var(--mono);color:var(--hormigon-2);margin-top:12px;text-align:center}
+.done{text-align:center;padding:40px 10px}
+.done .ok{width:64px;height:64px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;background:rgba(79,209,160,.12);color:var(--verde)}
+.done p{color:var(--hormigon);margin:10px 0 20px}
+.done .btn{width:auto}
+
+/* modal agenda */
+.modal{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:16px;background:rgba(7,11,14,.75);backdrop-filter:blur(6px)}
+.modal[hidden]{display:none}
+.mbox{position:relative;width:min(600px,100%);background:var(--acero-2);border-radius:20px;padding:30px;box-shadow:inset 0 0 0 1px var(--linea-2);animation:entra .5s var(--ease)}
+@keyframes entra{from{opacity:0;transform:translateY(14px) scale(.98)}}
+.mbox h3{font-size:24px;padding-right:40px}
+.mbox p{color:var(--hormigon);margin-top:10px}
+.mbox iframe{width:100%;height:min(70vh,640px);border:0;border-radius:12px;margin-top:16px;background:#fff}
+.mclose{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:10px;border:0;background:var(--acero-3);color:var(--papel);font-size:20px;cursor:pointer}
+
+footer{border-top:1px solid var(--linea);padding:36px 0;color:var(--hormigon);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+footer a{text-decoration:none;color:var(--hormigon)}footer a:hover{color:var(--papel)}
+footer nav{display:flex;gap:20px;flex-wrap:wrap}
+footer b{color:var(--papel);letter-spacing:.08em}
+
+.wa{position:fixed;right:20px;bottom:20px;z-index:70;width:58px;height:58px;border-radius:50%;background:#1fa855;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.7);animation:waEntra .8s 2.6s var(--ease) both}
+.wa::before{content:"";position:absolute;inset:0;border-radius:50%;animation:latido 2.6s 4s infinite}
+@keyframes waEntra{from{opacity:0;transform:translateY(20px) scale(.6)}}
+@keyframes latido{0%{box-shadow:0 0 0 0 rgba(31,168,85,.5)}70%,100%{box-shadow:0 0 0 16px rgba(31,168,85,0)}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}.rv{opacity:1;filter:none;transform:none}
+  .intro{display:none}
+}
+</style>
+<noscript><style>.rv{opacity:1;filter:none;transform:none}.intro{display:none}</style></noscript>
+</head>
+<body class="intro-on">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#1e2a31"/><g><g fill="#ffb020"><rect x="51.47" y="33.10" width="5.2" height="4.8" rx="1" transform="rotate(99 54.07 35.50)"/><rect x="49.31" y="39.75" width="5.2" height="4.8" rx="1" transform="rotate(117 51.91 42.15)"/><rect x="45.20" y="45.40" width="5.2" height="4.8" rx="1" transform="rotate(135 47.80 47.80)"/><rect x="39.55" y="49.51" width="5.2" height="4.8" rx="1" transform="rotate(153 42.15 51.91)"/><rect x="32.90" y="51.67" width="5.2" height="4.8" rx="1" transform="rotate(171 35.50 54.07)"/><rect x="25.90" y="51.67" width="5.2" height="4.8" rx="1" transform="rotate(189 28.50 54.07)"/><rect x="19.25" y="49.51" width="5.2" height="4.8" rx="1" transform="rotate(207 21.85 51.91)"/><rect x="13.60" y="45.40" width="5.2" height="4.8" rx="1" transform="rotate(225 16.20 47.80)"/><rect x="9.49" y="39.75" width="5.2" height="4.8" rx="1" transform="rotate(243 12.09 42.15)"/><rect x="7.33" y="33.10" width="5.2" height="4.8" rx="1" transform="rotate(261 9.93 35.50)"/><rect x="7.33" y="26.10" width="5.2" height="4.8" rx="1" transform="rotate(279 9.93 28.50)"/><rect x="9.49" y="19.45" width="5.2" height="4.8" rx="1" transform="rotate(297 12.09 21.85)"/><rect x="13.60" y="13.80" width="5.2" height="4.8" rx="1" transform="rotate(315 16.20 16.20)"/><rect x="19.25" y="9.69" width="5.2" height="4.8" rx="1" transform="rotate(333 21.85 12.09)"/><rect x="25.90" y="7.53" width="5.2" height="4.8" rx="1" transform="rotate(351 28.50 9.93)"/><rect x="32.90" y="7.53" width="5.2" height="4.8" rx="1" transform="rotate(369 35.50 9.93)"/></g><path d="M41.27 17.16 A17.5 17.5 0 1 0 49.49 32.61" fill="none" stroke="#ffb020" stroke-width="6.5" stroke-linecap="butt"/><path d="M52.55 32 H38" stroke="#ffb020" stroke-width="6.5" stroke-linecap="round"/><g fill="#e7eae5"><rect x="37.20" y="30.70" width="2.8" height="2.6" rx=".5" transform="rotate(90 38.60 32.00)"/><rect x="35.27" y="35.37" width="2.8" height="2.6" rx=".5" transform="rotate(135 36.67 36.67)"/><rect x="30.60" y="37.30" width="2.8" height="2.6" rx=".5" transform="rotate(180 32.00 38.60)"/><rect x="25.93" y="35.37" width="2.8" height="2.6" rx=".5" transform="rotate(225 27.33 36.67)"/><rect x="24.00" y="30.70" width="2.8" height="2.6" rx=".5" transform="rotate(270 25.40 32.00)"/><rect x="25.93" y="26.03" width="2.8" height="2.6" rx=".5" transform="rotate(315 27.33 27.33)"/><rect x="30.60" y="24.10" width="2.8" height="2.6" rx=".5" transform="rotate(360 32.00 25.40)"/><rect x="35.27" y="26.03" width="2.8" height="2.6" rx=".5" transform="rotate(405 36.67 27.33)"/><circle cx="32" cy="32" r="5.6"/></g><circle cx="32" cy="32" r="2.3" fill="#1e2a31"/></g></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></g></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.9c0-1.17-.02-2.68-1.63-2.68-1.64 0-1.89 1.28-1.89 2.6V21h-4z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M12 13v3l2 1.2"/></g></symbol>
+</svg>
+
+<!-- ===================== INTRO ===================== -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-in">
+    <svg class="intro-logo" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#1e2a31"/><g class="hex"><g fill="#ffb020"><rect x="51.47" y="33.10" width="5.2" height="4.8" rx="1" transform="rotate(99 54.07 35.50)"/><rect x="49.31" y="39.75" width="5.2" height="4.8" rx="1" transform="rotate(117 51.91 42.15)"/><rect x="45.20" y="45.40" width="5.2" height="4.8" rx="1" transform="rotate(135 47.80 47.80)"/><rect x="39.55" y="49.51" width="5.2" height="4.8" rx="1" transform="rotate(153 42.15 51.91)"/><rect x="32.90" y="51.67" width="5.2" height="4.8" rx="1" transform="rotate(171 35.50 54.07)"/><rect x="25.90" y="51.67" width="5.2" height="4.8" rx="1" transform="rotate(189 28.50 54.07)"/><rect x="19.25" y="49.51" width="5.2" height="4.8" rx="1" transform="rotate(207 21.85 51.91)"/><rect x="13.60" y="45.40" width="5.2" height="4.8" rx="1" transform="rotate(225 16.20 47.80)"/><rect x="9.49" y="39.75" width="5.2" height="4.8" rx="1" transform="rotate(243 12.09 42.15)"/><rect x="7.33" y="33.10" width="5.2" height="4.8" rx="1" transform="rotate(261 9.93 35.50)"/><rect x="7.33" y="26.10" width="5.2" height="4.8" rx="1" transform="rotate(279 9.93 28.50)"/><rect x="9.49" y="19.45" width="5.2" height="4.8" rx="1" transform="rotate(297 12.09 21.85)"/><rect x="13.60" y="13.80" width="5.2" height="4.8" rx="1" transform="rotate(315 16.20 16.20)"/><rect x="19.25" y="9.69" width="5.2" height="4.8" rx="1" transform="rotate(333 21.85 12.09)"/><rect x="25.90" y="7.53" width="5.2" height="4.8" rx="1" transform="rotate(351 28.50 9.93)"/><rect x="32.90" y="7.53" width="5.2" height="4.8" rx="1" transform="rotate(369 35.50 9.93)"/></g><path d="M41.27 17.16 A17.5 17.5 0 1 0 49.49 32.61" fill="none" stroke="#ffb020" stroke-width="6.5" stroke-linecap="butt"/><path d="M52.55 32 H38" stroke="#ffb020" stroke-width="6.5" stroke-linecap="round"/><g fill="#e7eae5"><rect x="37.20" y="30.70" width="2.8" height="2.6" rx=".5" transform="rotate(90 38.60 32.00)"/><rect x="35.27" y="35.37" width="2.8" height="2.6" rx=".5" transform="rotate(135 36.67 36.67)"/><rect x="30.60" y="37.30" width="2.8" height="2.6" rx=".5" transform="rotate(180 32.00 38.60)"/><rect x="25.93" y="35.37" width="2.8" height="2.6" rx=".5" transform="rotate(225 27.33 36.67)"/><rect x="24.00" y="30.70" width="2.8" height="2.6" rx=".5" transform="rotate(270 25.40 32.00)"/><rect x="25.93" y="26.03" width="2.8" height="2.6" rx=".5" transform="rotate(315 27.33 27.33)"/><rect x="30.60" y="24.10" width="2.8" height="2.6" rx=".5" transform="rotate(360 32.00 25.40)"/><rect x="35.27" y="26.03" width="2.8" height="2.6" rx=".5" transform="rotate(405 36.67 27.33)"/><circle cx="32" cy="32" r="5.6"/></g><circle cx="32" cy="32" r="2.3" fill="#1e2a31"/></g></svg>
+    <div class="intro-word"><b><span style="--i:0">G</span><span style="--i:1">E</span><span style="--i:2">B</span><span style="--i:3">A</span></b><small>Maintenance Engineering</small></div>
+  </div>
+</div>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="GEBA Maintenance Engineering, ir al inicio">
+      <svg width="44" height="44" aria-hidden="true"><use href="#logo"/></svg>
+      <span>GEBA<small>Maintenance Engineering</small></span>
+    </a>
+    <nav class="pill" id="menu" aria-label="Principal">
+      <a href="#inicio" class="on">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#predictivo">Predictivo</a>
+      <a href="#tableros">Tableros</a>
+      <a href="#equipo">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <button class="btn shiny btn-sm mob" type="button" data-agenda>Agendar llamada</button>
+    </nav>
+    <button class="btn shiny btn-sm cta" type="button" data-agenda>Agendar llamada</button>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+  </div>
+</header>
+
+<main>
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="inicio" aria-labelledby="h-hero">
+  <div class="net" id="net" aria-hidden="true"><canvas></canvas></div>
+  <div class="wrap">
+    <div class="hh">
+      <p class="kicker left rv">Ingeniería de mantenimiento para PyMEs</p>
+      <h1 id="h-hero" class="rv" style="--d:1" aria-label="Tu planta no necesita más urgencias, paradas imprevistas, fallas repetitivas ni incendios. Necesita un sistema.">
+        <span aria-hidden="true">Tu planta no necesita <span class="ln">más <span id="tw1">urgencias.</span></span><span class="l2" id="tw2">Necesita un sistema.</span></span>
+      </h1>
+    </div>
+      <p class="lead rv" style="--d:2">Ordenamos tu mantenimiento, medimos la condición de tus equipos y te dejamos los indicadores para decidir. La experiencia de un gerente de mantenimiento, sin sumarlo a tu nómina.</p>
+    <div class="hc">
+      <div class="ctas rv" style="--d:3">
+        <button class="btn shiny" type="button" data-agenda>Agendar llamada <span class="arr">→</span></button>
+        <a class="btn ghost" href="#servicios">Ver servicios</a>
+      </div>
+      <p class="micro rv" style="--d:4">Córdoba y alrededores · Respuesta en menos de 24 h hábiles</p>
+      <div class="pillars rv" style="--d:5">
+        <p class="pl-k">Cómo trabajamos con tu planta</p>
+        <div class="pl-row">
+          <div class="pl" style="--i:0"><span class="dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div><b>Llamada inicial</b><span>Sin costo</span></div></div>
+          <div class="pl" style="--i:1"><span class="dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><div><b>Diagnóstico</b><span>Relevamiento en planta</span></div></div>
+          <div class="pl" style="--i:2"><span class="dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></span><div><b>Implementación</b><span>Plan, repuestos y tableros</span></div></div>
+          <div class="pl" style="--i:3"><span class="dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></span><div><b>Acompañamiento</b><span>Seguimiento mensual</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="idea rv" style="--d:3" aria-hidden="true">
+      <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="Imagenes/4.jpg" aria-hidden="true"><source src="Video/GEBA_video_16x9.mp4" type="video/mp4"></video>
+      <span class="scan" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="mq">
+  <span>Análisis de vibraciones</span><span>Termografía</span><span>Tintas penetrantes</span><span>RCM</span><span>TPM</span><span>ISO 55001</span><span>Repuestos críticos</span><span>Power BI</span><span>MTBF · MTTR</span>
+  <span>Análisis de vibraciones</span><span>Termografía</span><span>Tintas penetrantes</span><span>RCM</span><span>TPM</span><span>ISO 55001</span><span>Repuestos críticos</span><span>Power BI</span><span>MTBF · MTTR</span>
+</div></div>
+
+<!-- ===================== PROBLEMA ===================== -->
+<section class="sec" id="problema" aria-labelledby="h-prob">
+  <div class="photo-bg clear" aria-hidden="true"><img src="Imagenes/1.jpg" alt="" loading="lazy"></div>
+  <div class="wrap">
+    <div class="head rv" style="max-width:none"><p class="kicker">El problema</p><h2 id="h-prob" style="font-size:clamp(28px,3.4vw,42px)">Las fallas no son mala suerte. <span class="mute">Son falta de sistema.</span></h2></div>
+    <div class="probs">
+      <div class="prob rv"><small>Reactivo</small><p>Más correctivo que preventivo. La parada no programada define la agenda y la misma falla vuelve una y otra vez.</p></div>
+      <div class="prob rv" style="--d:1"><small>Sin plan ni repuestos</small><p>El preventivo vive en un Excel viejo y falta el repuesto crítico justo cuando se rompe el equipo.</p></div>
+      <div class="prob rv" style="--d:2"><small>Sin datos</small><p>Sin indicadores ni costos por equipo, las decisiones se toman por intuición.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICIOS ===================== -->
+<section class="sec" id="servicios" aria-labelledby="h-svc" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv"><p class="kicker">Servicios</p><h2 id="h-svc">Entender, implementar<br><span class="mute">y sostener.</span></h2><p>Tu equipo conserva la ejecución. GEBA aporta el método, el plan, las mediciones y el seguimiento.</p></div>
+    <div class="modes">
+      <article class="card rv">
+        <span class="step-k">A · Diagnosticar</span>
+        <h3>Auditoría de mantenimiento</h3>
+        <p>Para plantas que necesitan saber dónde están paradas y por dónde empezar.</p>
+        <ul class="list"><li>Relevamiento de la gestión actual</li><li>Matriz de criticidad de equipos</li><li>Planes, registros, repuestos y organización</li><li>Plan de acción priorizado</li></ul>
+        <a class="go" href="#contacto" data-svc="Auditoría de mantenimiento">Pedir diagnóstico <span class="arr">→</span></a>
+      </article>
+      <article class="card feat rv" style="--d:1">
+        <span class="step-k">B · Implementar</span>
+        <h3>Implementación del plan</h3>
+        <p>Para convertir las recomendaciones en una forma de trabajo que funcione en el taller.</p>
+        <ul class="list"><li>Planes y tareas por equipo (RCM)</li><li>Procedimientos y responsables</li><li>Repuestos críticos: mínimos y punto de reorden</li><li>Tablero de indicadores en Power BI</li><li>Capacitación del equipo</li></ul>
+        <a class="go" href="#contacto" data-svc="Implementación del plan">Consultar <span class="arr">→</span></a>
+      </article>
+      <article class="card rv" style="--d:2">
+        <span class="step-k">C · Sostener</span>
+        <h3>Gerencia de mantenimiento a demanda</h3>
+        <p>Acompañamiento mensual para que el plan se ejecute, se mida y se ajuste junto a tu equipo.</p>
+        <ul class="list"><li>Planificación y programación</li><li>Seguimiento de backlog y desvíos</li><li>Análisis de fallas repetitivas</li><li>Reunión mensual de indicadores</li></ul>
+        <a class="go" href="#contacto" data-svc="Gerencia a demanda">Consultar <span class="arr">→</span></a>
+      </article>
+    </div>
+    <div class="areas-h rv"><h3>Áreas de trabajo</h3><p>Se suman a cualquiera de las tres formas de trabajo, según lo que priorice el diagnóstico. Estas son las herramientas técnicas que usamos.</p></div>
+    <div class="areas rv">
+      <div class="area"><span class="abg" aria-hidden="true" style="background-image:url('Imagenes/imagenes/confiabilidad.jpg')"></span><div class="area-h"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path pathLength="1" d="M9 12l2 2 4-4"/></svg></span><b>Confiabilidad y planes</b></div><div class="tools"><span>Matriz de criticidad</span><span>RCM</span><span>AMEF (FMEA)</span><span>Revisión de frecuencias</span><span>Rutas de inspección</span><span>Plan de lubricación</span><span>Procedimientos</span></div></div>
+      <div class="area"><span class="abg" aria-hidden="true" style="background-image:url('Imagenes/imagenes/analisis de fallos.jpg')"></span><div class="area-h"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle pathLength="1" cx="11" cy="11" r="7"/><path pathLength="1" d="M21 21l-4.3-4.3"/></svg></span><b>Análisis de fallas</b></div><div class="tools"><span>Causa raíz (RCA)</span><span>5 porqués</span><span>Ishikawa</span><span>Árbol de fallas</span><span>Pareto de paradas</span><span>Jack-Knife</span><span>Acción correctiva</span></div></div>
+      <div class="area"><span class="abg" aria-hidden="true" style="background-image:url('Imagenes/imagenes/mantenimiento basado en condicion.jpg')"></span><div class="area-h"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M2 12h4l3-8 5 16 3-8h5"/></svg></span><b>Mantenimiento basado en condición</b></div><div class="tools"><span>Vibraciones · ISO 20816</span><span>Termografía · NFPA 70B</span><span>Tintas penetrantes · ASTM E165</span><span>Criterios de alarma</span><span>Rutas a condición</span><span>Tendencias</span></div></div>
+      <div class="area"><span class="abg" aria-hidden="true" style="background-image:url('Imagenes/imagenes/repuestos.jpg')"></span><div class="area-h"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path pathLength="1" d="M3 8l9 5 9-5M12 13v8"/></svg></span><b>Repuestos críticos</b></div><div class="tools"><span>Lista por equipo</span><span>Curva ABC</span><span>Mínimos y máximos</span><span>Punto de reorden</span><span>Capital inmovilizado</span><span>Obsolescencia</span><span>5S en el pañol</span></div></div>
+      <div class="area"><span class="abg" aria-hidden="true" style="background-image:url('Imagenes/imagenes/activos.jpg')"></span><div class="area-h"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect pathLength="1" x="4" y="3" width="16" height="18" rx="2"/><path pathLength="1" d="M8 8h8M8 12h8M8 16h5"/></svg></span><b>Gestión de activos y costos</b></div><div class="tools"><span>ISO 55001</span><span>Costo del ciclo de vida</span><span>Reparar o reemplazar</span><span>Presupuesto y desvíos</span><span>Control de contratistas</span><span>Paradas programadas</span><span>Puesta en marcha</span></div></div>
+      <div class="area"><span class="abg" aria-hidden="true" style="background-image:url('Imagenes/imagenes/indicadores y datos.jpg')"></span><div class="area-h"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><b>Indicadores y datos</b></div><div class="tools"><span>Disponibilidad</span><span>MTBF · MTTR</span><span>Backlog</span><span>Cumplimiento del plan</span><span>Costo por equipo</span><span>EN 15341</span><span>Power BI</span><span>Power Automate</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PREDICTIVO ===================== -->
+<section class="sec" id="predictivo" aria-labelledby="h-pdm" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv"><p class="kicker">Mantenimiento predictivo</p><span class="soon-tag"><i></i>Próximamente</span><h2 id="h-pdm">Medir antes<br><span class="mute">de que se rompa.</span></h2><p>Cada técnica apunta a un modo de falla distinto. Estamos preparando este servicio: muy pronto vas a poder contratarlo.</p></div>
+    <div class="carousel rv" aria-label="Técnicas de mantenimiento predictivo">
+      <div class="track" id="track">
+      <article class="ph" tabindex="0">
+        <img src="Imagenes/Analisis de vibraciones.webp" alt="Medición de vibraciones en un equipo rotativo" loading="lazy">
+        <span class="n">01</span><span class="ph-soon">Próximamente</span>
+        <span class="cert"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 8 5-3 5 3-1.5-8"/></svg>ISO 18436-2</span>
+        <h3>Análisis de vibraciones</h3>
+        <p>Cada falla mecánica deja su firma en el espectro.</p>
+        <div class="chips"><span>Desbalanceo</span><span>Desalineación</span><span>Rodamientos</span><span>Holguras</span><span>Engranajes</span></div>
+        <div class="more"><div><p><b>Entregable · ISO 20816</b>Espectros por equipo, severidad en semáforo, diagnóstico y acción priorizada. En rutas periódicas, curva de tendencia.</p></div></div>
+      </article>
+      <article class="ph" tabindex="0">
+        <img src="Imagenes/Termografia.jpg" alt="Inspección termográfica de una instalación eléctrica" loading="lazy">
+        <span class="n">02</span><span class="ph-soon">Próximamente</span>
+        <h3>Termografía infrarroja</h3>
+        <p>Lo que hoy se calienta, mañana falla.</p>
+        <div class="chips"><span>Tableros BT/MT</span><span>Conexiones</span><span>Motores</span><span>Rodamientos</span><span>Aislaciones</span></div>
+        <div class="more"><div><p><b>Entregable · NFPA 70B</b>Termograma e imagen visual de cada hallazgo, diferencia de temperatura, severidad y prioridad de intervención.</p></div></div>
+      </article>
+      <article class="ph" tabindex="0">
+        <img src="Imagenes/tintas penetrantes.jpg" alt="Ensayo de tintas penetrantes sobre una pieza metálica" loading="lazy">
+        <span class="n">03</span><span class="ph-soon">Próximamente</span>
+        <h3>Tintas penetrantes</h3>
+        <p>Fisuras invisibles a simple vista, a la luz.</p>
+        <div class="chips"><span>Soldaduras</span><span>Ejes</span><span>Carcasas</span><span>Fisuras por fatiga</span><span>Porosidad</span></div>
+        <div class="more"><div><p><b>Entregable · ASTM E165</b>Indicaciones encontradas, criterio de aceptación aplicado y registro fotográfico de cada zona ensayada.</p></div></div>
+      </article>
+      <article class="brandcard">
+        <div>
+          <svg class="bc-logo" aria-hidden="true"><use href="#logo"/></svg>
+          <b>GEBA</b><small>MAINTENANCE ENGINEERING</small>
+          <p>Medimos la condición de tus equipos y la convertimos en decisiones de mantenimiento.</p>
+        </div>
+        <button class="btn shiny btn-sm" type="button" data-agenda>Agendar llamada <span class="arr">→</span></button>
+      </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TABLEROS ===================== -->
+<section class="sec" id="tableros" aria-labelledby="h-tab" style="padding-top:0">
+  <div class="wrap dash">
+    <div class="txt rv">
+      <p class="kicker left">Tableros de gestión</p>
+      <h2 id="h-tab">Lo que no se mide,<br><span class="mute">no se mejora.</span></h2>
+      <p>Integramos tu CMMS, tus planillas o tus registros en papel en un tablero de Power BI, con filtros por planta, tipo de activo y criticidad. En un minuto ves dónde se pierde disponibilidad y dinero.</p>
+      <div class="kpis"><span>Disponibilidad</span><span>MTBF</span><span>MTTR</span><span>MTTF</span><span>Backlog</span><span>Cumplimiento preventivo</span><span>Costos</span><span>Pareto</span><span>Jack-Knife</span><span>Repuestos ABC</span></div>
+    </div>
+    <div class="tcol rv" style="--d:1">
+    <div class="tc">
+    <ul class="dock" aria-label="Herramientas con las que trabajamos">
+      <li class="dock-item"><span class="dock-tip" aria-hidden="true">Power BI</span><span class="dock-bubble"><img src="Imagenes/herramientas/powerbi.png" alt="Power BI" loading="lazy" decoding="async" class="dock-img"></span></li>
+      <li class="dock-item"><span class="dock-tip" aria-hidden="true">Excel</span><span class="dock-bubble"><img src="Imagenes/herramientas/excel.svg" alt="Excel" loading="lazy" decoding="async" class="dock-img"></span></li>
+      <li class="dock-item"><span class="dock-tip" aria-hidden="true">SQL</span><span class="dock-bubble"><img src="Imagenes/herramientas/sql.svg" alt="SQL" loading="lazy" decoding="async" class="dock-img"></span></li>
+      <li class="dock-item"><span class="dock-tip" aria-hidden="true">Azure</span><span class="dock-bubble"><img src="Imagenes/herramientas/azure.svg" alt="Azure" loading="lazy" decoding="async" class="dock-img"></span></li>
+      <li class="dock-item"><span class="dock-tip" aria-hidden="true">Power Automate</span><span class="dock-bubble"><img src="Imagenes/herramientas/power-automate.webp" alt="Power Automate" loading="lazy" decoding="async" class="dock-img"></span></li>
+      <li class="dock-item"><span class="dock-tip" aria-hidden="true">SharePoint</span><span class="dock-bubble"><img src="Imagenes/herramientas/sharepoint.svg" alt="SharePoint" loading="lazy" decoding="async" class="dock-img"></span></li>
+      <li class="dock-item"><span class="dock-tip" aria-hidden="true">Otros</span><span class="dock-bubble dock-bubble-mas"><svg viewBox="0 0 24 8" width="60%" fill="currentColor" role="img" aria-label="Otros"><circle cx="4" cy="4" r="2.6"/><circle cx="12" cy="4" r="2.6"/><circle cx="20" cy="4" r="2.6"/></svg></span></li>
+    </ul>
+      <div class="screen" id="screen">
+        <div class="frame"><div class="pbi"><img class="pbi-ui" src="Imagenes/powerbi-desktop-v5.png" alt="" loading="lazy"><img class="pbi-page" src="Imagenes/dashboard-confiabilidad-v2.png" alt="Tablero de confiabilidad en Power BI Desktop: disponibilidad operativa, MTBF, MTTR, paradas no programadas, disponibilidad mensual por planta, Pareto de paradas por activo, diagrama Jack-Knife y fallas por activo y mes" loading="lazy"></div></div>
+      </div>
+    </div>
+      <p class="note">Ejemplo de tablero con datos de demostración.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EQUIPO ===================== -->
+<section class="sec" id="equipo" aria-labelledby="h-eq" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv"><p class="kicker">Quiénes somos</p><h2 id="h-eq">Experiencia de planta.<br><span class="mute">Evidencia en datos.</span></h2></div>
+
+    <div class="person">
+      <div class="photo rv">
+        <div class="ring"></div>
+        <div class="face"><span class="ini" aria-hidden="true">VR</span><img src="Imagenes/victor.jpg" alt="Víctor Rodríguez Guerrero" onerror="this.remove()"></div>
+      </div>
+      <div class="who rv" style="--d:1">
+        <p class="role">Ingeniero Mecánico · MBA</p>
+        <h3>Víctor Rodríguez Guerrero</h3>
+        <p>Dirigió el mantenimiento de plantas de minería, celulosa, saneamiento y proceso continuo en Argentina y Chile, en empresas como Collahuasi, CMPC, Aguas Andinas y Refinería del Centro. Armó sistemas de gestión de mantenimiento desde cero, implementó RCM, TPM y gestión de activos bajo ISO 55001, lideró equipos técnicos y puso en marcha líneas productivas nuevas.</p>
+        <p class="does"><b>En GEBA</b>Define la estrategia, la criticidad y los planes de mantenimiento, y acompaña a tu equipo hasta que el sistema funciona solo.</p>
+      </div>
+    </div>
+
+    <div class="person rev">
+      <div class="photo rv">
+        <div class="ring" style="animation-direction:reverse"></div>
+        <div class="face"><span class="ini" aria-hidden="true">EB</span><img src="Imagenes/exequiel-barria.png" alt="Exequiel Barria" onerror="this.remove()"></div>
+      </div>
+      <div class="who rv" style="--d:1">
+        <p class="role">Ingeniero Industrial</p>
+        <h3>Exequiel Barria</h3>
+        <p>Se formó planificando mantenimiento en YPF, Refinería del Centro y Coca-Cola Andina: planes preventivos y correctivos, gestión de repuestos en SAP PM, tableros en Power BI y automatizaciones con Power Automate. Cursa el posgrado en Gestión de Activos y Mantenimiento de la Universidad Austral.</p>
+        <p class="does"><b>En GEBA</b>Convierte los registros de mantenimiento en indicadores y tableros, planifica el trabajo y automatiza el seguimiento del plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AUTODIAGNÓSTICO ===================== -->
+<section class="sec" id="autodiagnostico" aria-labelledby="h-quiz" style="padding-top:0">
+  <div class="wrap">
+    <div class="quiz">
+      <form class="qs rv" id="quiz" aria-label="Preguntas del autodiagnóstico"></form>
+      <aside class="score rv" style="--d:1" aria-live="polite">
+        <p class="kicker left">Autodiagnóstico</p>
+        <h2 id="h-quiz" style="font-size:clamp(26px,2.6vw,32px)">¿Qué tan maduro es tu mantenimiento?</h2>
+        <small style="margin-top:22px">Tu nivel</small>
+        <div class="gauge" aria-hidden="true"><i id="g-bar"></i></div>
+        <div class="lvls" aria-hidden="true"><span>Reactivo</span><span>Planificado</span><span>Proactivo</span><span>Excelencia</span></div>
+        <h3 id="q-lvl">Respondé las preguntas</h3>
+        <p id="q-txt">El resultado se actualiza a medida que avanzás.</p>
+        <p class="pend" id="q-pend">Respondé todas para ver tu nivel completo</p>
+        <a class="btn shiny" href="#contacto" id="q-cta">Quiero el diagnóstico completo <span class="arr">→</span></a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACTO ===================== -->
+<section class="sec" id="contacto" aria-labelledby="h-con">
+  <div class="photo-bg" aria-hidden="true"><img src="Imagenes/3.jpg" alt="" loading="lazy"></div>
+  <div class="wrap">
+    <div class="contact">
+      <div class="rv">
+        <p class="kicker left">Contacto</p>
+        <h2 id="h-con">Empecemos por<br><span class="grad">entender tu planta.</span></h2>
+        <p class="lead">Contanos qué pasa con tu mantenimiento y te proponemos un alcance y un presupuesto a medida.</p>
+        <ul class="checks"><li>Primera conversación sin cargo</li><li>Respuesta en menos de 24 h hábiles</li><li>Presupuesto según el tamaño de tu planta</li><li>Visitas a planta en Córdoba y alrededores; tableros y seguimiento también a distancia</li></ul>
+        <div class="links">
+          <a class="lk" id="lk-wa" href="#contacto"><span class="i"><svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg></span><span><b>WhatsApp</b><small id="lk-wa-t">[Número]</small></span><span class="arr" aria-hidden="true">→</span></a>
+          <a class="lk" id="lk-mail" href="#contacto"><span class="i"><svg width="20" height="20" aria-hidden="true"><use href="#i-mail"/></svg></span><span><b>Email</b><small id="lk-mail-t">[Email]</small></span><span class="arr" aria-hidden="true">→</span></a>
+          <a class="lk" id="lk-in" href="#equipo"><span class="i"><svg width="20" height="20" aria-hidden="true"><use href="#i-in"/></svg></span><span><b>LinkedIn</b><small>Víctor Rodríguez · artículos de mantenimiento</small></span><span class="arr" aria-hidden="true">→</span></a>
+        </div>
+        <div class="agenda">
+          <span class="i"><svg width="20" height="20" aria-hidden="true"><use href="#i-cal"/></svg></span>
+          <span><b>¿Preferís hablarlo en vivo?</b><small>Videollamada sin compromiso.</small></span>
+          <button class="btn shiny btn-sm" type="button" data-agenda>Agendar</button>
+        </div>
+      </div>
+
+      <form class="form rv" id="form" novalidate style="--d:1">
+        <div id="f-body">
+          <h3>Pedí tu diagnóstico</h3>
+          <p class="sub">Los campos con * son obligatorios.</p>
+          <div class="row2">
+            <div class="fld"><label for="f-nom">Nombre *</label><input id="f-nom" name="nombre" autocomplete="name" maxlength="80" required><p class="err">Ingresá tu nombre.</p></div>
+            <div class="fld"><label for="f-emp">Empresa *</label><input id="f-emp" name="empresa" autocomplete="organization" maxlength="100" required><p class="err">Ingresá la empresa.</p></div>
+          </div>
+          <div class="row2">
+            <div class="fld"><label for="f-mail">Email *</label><input id="f-mail" name="email" type="email" autocomplete="email" maxlength="120" required><p class="err">Ingresá un email válido.</p></div>
+            <div class="fld"><label for="f-tel">WhatsApp *</label><input id="f-tel" name="telefono" type="tel" autocomplete="tel" maxlength="25" placeholder="+54 9 351 ..." required><p class="err">Ingresá un teléfono válido.</p></div>
+          </div>
+          <fieldset class="fld" id="f-svcset">
+            <legend>¿Qué te interesa? *</legend>
+            <div class="pick">
+              <label><input type="checkbox" name="servicio" value="Auditoría de mantenimiento"><span>Diagnóstico</span></label>
+              <label><input type="checkbox" name="servicio" value="Implementación del plan"><span>Implementación</span></label>
+              <label><input type="checkbox" name="servicio" value="Gerencia a demanda"><span>Gerencia a demanda</span></label>
+              <label><input type="checkbox" name="servicio" value="Análisis de vibraciones"><span>Vibraciones</span></label>
+              <label><input type="checkbox" name="servicio" value="Termografía"><span>Termografía</span></label>
+              <label><input type="checkbox" name="servicio" value="Tintas penetrantes"><span>Tintas penetrantes</span></label>
+              <label><input type="checkbox" name="servicio" value="Tableros de gestión"><span>Tableros</span></label>
+            </div>
+            <p class="err">Elegí al menos una opción.</p>
+          </fieldset>
+          <div class="fld"><label for="f-msg">Contanos tu situación</label><textarea id="f-msg" name="mensaje" maxlength="1500" placeholder="Ej.: líneas de envasado con muchas paradas por fallas en motores y ningún plan preventivo actualizado."></textarea></div>
+          <button class="btn shiny" type="submit" id="f-send"><span id="f-send-t">Enviar solicitud</span> <span class="arr">→</span></button>
+          <p class="fnote" id="f-note">Usamos tus datos solo para responder tu consulta.</p>
+        </div>
+        <div class="done" id="f-done" hidden tabindex="-1">
+          <div class="ok"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>¡Gracias! Recibimos tu solicitud.</h3>
+          <p>Te contactamos en menos de 24 h hábiles. Si querés adelantar, agendá una llamada.</p>
+          <button class="btn shiny btn-sm" type="button" data-agenda>Agendar llamada</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> <b>GEBA</b> · Maintenance Engineering · Córdoba, Argentina</span>
+    <nav aria-label="Pie"><a href="#servicios">Servicios</a><a href="#predictivo">Predictivo</a><a href="#tableros">Tableros</a><a href="#equipo">Nosotros</a><a href="#contacto">Contacto</a></nav>
+  </div>
+</footer>
+
+<a class="wa" id="wa" href="#contacto" aria-label="Escribinos por WhatsApp"><svg width="28" height="28" aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+<div class="modal" id="agm" hidden role="dialog" aria-modal="true" aria-labelledby="agm-t">
+  <div class="mbox">
+    <button class="mclose" type="button" data-close aria-label="Cerrar">×</button>
+    <h3 id="agm-t">Agendá una llamada</h3>
+    <div id="agm-body"></div>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   CONFIGURACIÓN
+   ========================================================= */
+const CONFIG = {
+  marca: 'GEBA',
+  whatsapp: '5492964523248',            // solo números (Exequiel)
+  whatsappTxt: '+54 9 2964 52-3248',    // cómo se muestra en pantalla
+  email: 'exequiel.barria16@gmail.com', // Exequiel
+  linkedin: 'https://www.linkedin.com/in/victor-rodriguez-industrial/', // Víctor
+  FORM_ENDPOINT: '',  // disparador HTTP de Power Automate
+  AGENDA_URL: ''      // página de reservas de Google Calendar (?gv=true)
+};
+
+const $ = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- intro ---------- */
+const intro = $('#intro');
+const endIntro = () => { if (!intro.isConnected) return; intro.remove(); document.body.classList.remove('intro-on'); };
+if (reduce) endIntro();
+else { intro.addEventListener('animationend', e => { if (e.animationName === 'telon') endIntro(); }); intro.addEventListener('click', endIntro); setTimeout(endIntro, 3300); }
+
+/* ---------- video de portada: se pausa si el usuario prefiere menos movimiento ---------- */
+const hv = $('#hero-video'); if (hv && reduce) { hv.removeAttribute('autoplay'); hv.pause(); }
+
+/* ---------- nav ---------- */
+const nav = $('#nav'), menu = $('#menu'), burger = $('#burger');
+const onScroll = () => nav.classList.toggle('solid', scrollY > 20);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+burger.addEventListener('click', () => { const o = menu.classList.toggle('open'); burger.setAttribute('aria-expanded', o); });
+$$('a', menu).forEach(a => a.addEventListener('click', () => { menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); }));
+$('#yr').textContent = new Date().getFullYear();
+const navLinks = $$('a:not(.btn)', menu);
+const alias = { problema: 'inicio', autodiagnostico: 'equipo' };
+const so = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const id = alias[e.target.id] || e.target.id;
+  navLinks.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + id));
+}), { rootMargin: '-45% 0px -50% 0px' });
+$$('main section[id]').forEach(s => so.observe(s));
+
+/* ---------- aparición con blur ---------- */
+const reveal = el => el.classList.add('in');
+const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { reveal(e.target); ro.unobserve(e.target); } }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+$$('.rv').forEach(el => ro.observe(el));
+const sweep = () => $$('.rv:not(.in)').forEach(el => { const r = el.getBoundingClientRect(); if (r.top < innerHeight * .92 && r.bottom > 0) reveal(el); });
+addEventListener('scroll', sweep, { passive: true }); addEventListener('load', sweep); setTimeout(sweep, 400);
+
+/* ---------- título: se esconde y reaparece rotando palabras clave ---------- */
+(() => {
+  if (reduce) return;
+  const WORDS = ['urgencias.', 'paradas imprevistas.', 'fallas repetitivas.', 'incendios.'];
+
+  const segs = [$('#tw1'), $('#tw2')], line2 = segs[1].textContent;
+  const caret = document.createElement('span'); caret.className = 'caret';
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  const h1 = $('#h-hero');
+  /* reserva el alto de la palabra más larga para que la página no salte */
+  const lock = () => {
+    const keep = segs[0].textContent; h1.style.minHeight = ''; let max = 0;
+    WORDS.forEach(w => { for (let n = 0; n <= w.length; n++) { segs[0].textContent = w.slice(0, n) || '​'; segs[0].append(caret); max = Math.max(max, h1.offsetHeight); } }); caret.remove();
+    segs[0].textContent = keep; if (caret.isConnected) segs[0].append(caret);
+    h1.style.minHeight = max + 'px';
+  };
+  lock(); addEventListener('resize', lock); if (document.fonts) document.fonts.ready.then(lock);
+  const grow = () => { if (h1.offsetHeight > parseFloat(h1.style.minHeight || 0)) h1.style.minHeight = h1.offsetHeight + 'px'; };
+  const put = (el, txt) => { grow(); el.textContent = txt || '​'; el.append(caret); grow(); };
+  async function loop() {
+    while (document.getElementById('intro') || !h1.classList.contains('in')) await wait(250);
+    await wait(3800);
+    let w = 0;
+    while (true) {
+      for (let n = line2.length; n >= 0; n--) { put(segs[1], line2.slice(0, n)); await wait(30); }
+      for (let n = WORDS[w].length; n >= 0; n--) { put(segs[0], WORDS[w].slice(0, n)); await wait(34); }
+      w = (w + 1) % WORDS.length;
+      await wait(550);
+      for (let n = 0; n <= WORDS[w].length; n++) { put(segs[0], WORDS[w].slice(0, n)); await wait(78); }
+      await wait(350);
+      for (let n = 0; n <= line2.length; n++) { put(segs[1], line2.slice(0, n)); await wait(60); }
+      await wait(4200);
+    }
+  }
+  loop();
+})();
+
+/* ---------- red interactiva de la portada ---------- */
+(() => {
+  const box = $('#net'), cv = $('canvas', box), ctx = cv.getContext('2d');
+  if (!ctx) return;
+  const BASE = [231, 234, 229, .05], HOT = [255, 176, 32, .9], DOT = [231, 234, 229, .1], DOTH = [255, 176, 32, 1];
+  const mix = (a, b, t) => a + (b - a) * t;
+  const col = (a, b, t) => `rgba(${Math.round(mix(a[0], b[0], t))},${Math.round(mix(a[1], b[1], t))},${Math.round(mix(a[2], b[2], t))},${mix(a[3], b[3], t).toFixed(3)})`;
+  const R = 240, GAP = 58;
+  let W = 0, H = 0, raf = 0, visible = true;
+  const m = { x: -9999, y: -9999 }, goal = { x: -9999, y: -9999 }, waves = [];
+  const size = () => { const d = Math.min(devicePixelRatio || 1, 2), r = box.getBoundingClientRect(); W = r.width; H = r.height; cv.width = Math.round(W * d); cv.height = Math.round(H * d); ctx.setTransform(d, 0, 0, d, 0, 0); draw(); };
+  const shift = (x, y, i, j, cols, rows) => {
+    const ex = Math.min(i / 1.5, (cols - 1 - i) / 1.5, 1), ey = Math.min(j / 1.5, (rows - 1 - j) / 1.5, 1), edge = ex * ex * ey * ey;
+    const dx = x - m.x, dy = y - m.y, dist = Math.hypot(dx, dy), near = Math.max(0, 1 - dist / R) * edge;
+    let ox = 0, oy = 0;
+    for (const w of waves) { const wx = x - w.x, wy = y - w.y, off = Math.hypot(wx, wy) - w.r; if (Math.abs(off) < 55) { const f = (1 - Math.abs(off) / 55) * w.o * 18 * edge, ang = Math.atan2(wy, wx), sg = off < 0 ? -1 : 1; ox -= Math.cos(ang) * f * sg; oy -= Math.sin(ang) * f * sg; } }
+    if (dist < R && dist > 0 && edge > 0) { const n = dist / R, push = (n < .01 ? 0 : (1 - n) * (1 - n) * Math.min(1, dist / 60)) * 22 * edge, ang = Math.atan2(dy, dx); return [x - Math.cos(ang) * push + ox, y - Math.sin(ang) * push + oy, near]; }
+    return [x + ox, y + oy, near];
+  };
+  function draw() {
+    if (!W || !H) return;
+    ctx.clearRect(0, 0, W, H);
+    const cols = Math.max(2, Math.ceil(W / GAP)) + 1, rows = Math.max(2, Math.ceil(H / GAP)) + 1, sx = W / (cols - 1), sy = H / (rows - 1), P = [];
+    for (let j = 0; j < rows; j++) { P[j] = []; for (let i = 0; i < cols; i++) P[j][i] = shift(i * sx, j * sy, i, j, cols, rows); }
+    const line = (a, b) => { const t0 = (a[2] + b[2]) / 2, t = t0 * t0 * (3 - 2 * t0); ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.strokeStyle = col(BASE, HOT, t); ctx.lineWidth = mix(.7, 1.4, t); ctx.stroke(); };
+    for (let j = 0; j < rows; j++) for (let i = 0; i < cols - 1; i++) line(P[j][i], P[j][i + 1]);
+    for (let i = 0; i < cols; i++) for (let j = 0; j < rows - 1; j++) line(P[j][i], P[j + 1][i]);
+    for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++) {
+      const [x, y, n] = P[j][i], t = n * n * (3 - 2 * n), r = mix(1.6, 3, t);
+      if (t > .3) { const g = ctx.createRadialGradient(x, y, r * .5, x, y, r + mix(0, 6, (t - .3) / .7)); g.addColorStop(0, `rgba(255,176,32,${(.3 * t).toFixed(3)})`); g.addColorStop(1, 'rgba(255,176,32,0)'); ctx.beginPath(); ctx.arc(x, y, r + mix(0, 6, (t - .3) / .7), 0, 7); ctx.fillStyle = g; ctx.fill(); }
+      ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fillStyle = col(DOT, DOTH, t); ctx.fill();
+    }
+    for (const w of waves) { ctx.beginPath(); ctx.arc(w.x, w.y, Math.max(0, w.r), 0, 7); ctx.strokeStyle = `rgba(255,176,32,${(.28 * w.o).toFixed(3)})`; ctx.lineWidth = 1.5; ctx.stroke(); }
+  }
+  const busy = () => waves.length || Math.abs(m.x - goal.x) > .4 || Math.abs(m.y - goal.y) > .4;
+  const frame = now => {
+    m.x = mix(m.x, goal.x, .08); m.y = mix(m.y, goal.y, .08);
+    for (let k = waves.length - 1; k >= 0; k--) { const w = waves[k], t = (now - w.t) / 1000; w.r = 400 * t; w.o = Math.max(0, 1 - 1.2 * t); if (w.o <= 0) waves.splice(k, 1); }
+    draw(); raf = busy() ? requestAnimationFrame(frame) : 0;
+  };
+  const kick = () => { if (!raf && visible && !reduce) raf = requestAnimationFrame(frame); };
+  const local = e => { const r = box.getBoundingClientRect(); return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom ? null : { x: e.clientX - r.left, y: e.clientY - r.top }; };
+  addEventListener('pointermove', e => { const p = local(e); if (p) { goal.x = p.x; goal.y = p.y; if (m.x < -1000) { m.x = p.x; m.y = p.y; } } else { goal.x = goal.y = -9999; } kick(); }, { passive: true });
+  addEventListener('click', e => { const p = local(e); if (p) { waves.push({ x: p.x, y: p.y, r: 0, o: 1, t: performance.now() }); kick(); } });
+  new IntersectionObserver(([en]) => { visible = en.isIntersecting; if (!visible && raf) { cancelAnimationFrame(raf); raf = 0; } }, { rootMargin: '120px' }).observe(box);
+  new ResizeObserver(size).observe(box); size();
+})();
+
+/* ---------- carrusel infinito de predictivo ---------- */
+(() => {
+  const tr = $('#track'); if (!tr) return;
+  [...tr.children].forEach(n => { const c = n.cloneNode(true); c.setAttribute('aria-hidden', 'true'); c.removeAttribute('tabindex'); $$('a,button', c).forEach(x => x.tabIndex = -1); tr.appendChild(c); });
+})();
+
+/* ---------- brillo que sigue al mouse en tarjetas ---------- */
+$$('.card').forEach(c => c.addEventListener('pointermove', e => {
+  const r = c.getBoundingClientRect();
+  c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+}));
+
+/* ---------- áreas de trabajo: fondo que sigue al mouse ---------- */
+if (!reduce) $$('.area').forEach(a => {
+  a.addEventListener('pointermove', e => {
+    const r = a.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    a.style.setProperty('--px', (-x * 14) + 'px'); a.style.setProperty('--py', (-y * 14) + 'px');
+    a.style.setProperty('--mx', (e.clientX - r.left) + 'px'); a.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  });
+  a.addEventListener('pointerleave', () => { a.style.setProperty('--px', '0px'); a.style.setProperty('--py', '0px'); });
+});
+
+/* ---------- inclinación 3D del tablero ---------- */
+const scr = $('#screen'), frame = $('.frame', scr);
+if (!reduce && matchMedia('(hover:hover)').matches) {
+  scr.addEventListener('pointermove', e => {
+    const r = scr.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    frame.style.setProperty('--ry', (x * 8) + 'deg'); frame.style.setProperty('--rx', (-y * 6) + 'deg');
+  });
+  scr.addEventListener('pointerleave', () => { frame.style.setProperty('--ry', '0deg'); frame.style.setProperty('--rx', '0deg'); });
+}
+
+/* ---------- enlaces de contacto ---------- */
+const waMsg = `Hola, quiero información sobre los servicios de ${CONFIG.marca}.`;
+const ext = (a, href) => { a.href = href; a.target = '_blank'; a.rel = 'noopener'; };
+if (CONFIG.whatsapp) {
+  [$('#lk-wa'), $('#wa')].forEach(a => ext(a, `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(waMsg)}`));
+  $('#lk-wa-t').textContent = CONFIG.whatsappTxt || '+' + CONFIG.whatsapp;
+}
+if (CONFIG.email) { $('#lk-mail').href = 'mailto:' + CONFIG.email; $('#lk-mail-t').textContent = CONFIG.email; }
+if (CONFIG.linkedin) ext($('#lk-in'), CONFIG.linkedin);
+
+/* servicio preseleccionado desde las tarjetas */
+$$('[data-svc]').forEach(a => a.addEventListener('click', () => { const i = $(`#f-svcset input[value="${a.dataset.svc}"]`); if (i) i.checked = true; }));
+
+/* =========================================================
+   AUTODIAGNÓSTICO
+   ========================================================= */
+const QS = [
+  '¿Tenés un plan preventivo escrito, vigente y que se cumple?',
+  '¿Los equipos tienen una criticidad definida?',
+  '¿Cada intervención queda registrada en una orden de trabajo?',
+  '¿Medís disponibilidad, MTBF o MTTR todos los meses?',
+  '¿Tenés stock definido de repuestos críticos?',
+  '¿Aplicás alguna técnica predictiva?'
+];
+const OPTS = [['No', 0], ['A medias', 1], ['Sí', 2]];
+$('#quiz').innerHTML = QS.map((q, i) => `<div class="q"><p id="q${i}">${q}</p><div class="seg" role="radiogroup" aria-labelledby="q${i}">${OPTS.map(o => `<label><input type="radio" name="q${i}" value="${o[1]}"><span>${o[0]}</span></label>`).join('')}</div></div>`).join('');
+const LV = [
+  [0, 'Reactivo', 'El mantenimiento corre detrás de las fallas. Un diagnóstico y un plan preventivo por criticidad dan el mayor retorno inmediato.'],
+  [.35, 'Planificado', 'Hay bases, pero falta sistematizar: registros completos, indicadores y cumplimiento del plan.'],
+  [.6, 'Proactivo', 'Buen nivel. El próximo salto viene del predictivo, la causa raíz y los tableros de gestión.'],
+  [.85, 'Excelencia', 'Muy bien. Te ayudamos a sostenerlo y a optimizar costos con análisis de datos.']
+];
+let quizResult = '';
+$('#quiz').addEventListener('change', () => {
+  const ans = QS.map((_, i) => $(`input[name="q${i}"]:checked`)).filter(Boolean);
+  const sc = ans.reduce((s, a) => s + +a.value, 0) / (QS.length * 2), left = QS.length - ans.length;
+  const lv = [...LV].reverse().find(l => sc >= l[0]);
+  $('#g-bar').style.width = (sc * 100) + '%';
+  $('#q-lvl').textContent = (left ? 'Parcial: ' : 'Nivel ') + lv[1];
+  $('#q-txt').textContent = lv[2];
+  $('#q-pend').textContent = left ? 'Respondé todas para ver tu nivel completo' : 'Autodiagnóstico completo';
+  quizResult = left ? '' : `Autodiagnóstico: nivel ${lv[1]}`;
+});
+$('#q-cta').addEventListener('click', () => {
+  if (!quizResult) return;
+  const m = $('#f-msg'); if (!m.value.includes('Autodiagnóstico')) m.value = (quizResult + '\n' + m.value).trim();
+  $('#f-svcset input[value="Auditoría de mantenimiento"]').checked = true;
+});
+
+/* =========================================================
+   FORMULARIO (el envío real se conecta en la etapa final)
+   ========================================================= */
+const rules = {
+  'f-nom': v => v.trim().length >= 3,
+  'f-emp': v => v.trim().length >= 2,
+  'f-mail': v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
+  'f-tel': v => v.replace(/\D/g, '').length >= 8
+};
+const mark = (el, bad) => el.closest('.fld').classList.toggle('bad', bad);
+Object.keys(rules).forEach(id => $('#' + id).addEventListener('input', e => mark(e.target, false)));
+$('#f-svcset').addEventListener('change', () => $('#f-svcset').classList.remove('bad'));
+$('#form').addEventListener('submit', async e => {
+  e.preventDefault();
+  let first = null;
+  Object.entries(rules).forEach(([id, ok]) => { const el = $('#' + id), bad = !ok(el.value); mark(el, bad); if (bad && !first) first = el; });
+  const svcs = $$('#f-svcset input:checked').map(i => i.value);
+  $('#f-svcset').classList.toggle('bad', !svcs.length);
+  if (!svcs.length && !first) first = $('#f-svcset input');
+  if (first) { first.focus(); return; }
+  const data = { nombre: $('#f-nom').value.trim(), empresa: $('#f-emp').value.trim(), email: $('#f-mail').value.trim(), telefono: $('#f-tel').value.trim(), servicios: svcs.join(', '), mensaje: $('#f-msg').value.trim(), fecha: new Date().toISOString() };
+  const btn = $('#f-send'); btn.disabled = true; $('#f-send-t').textContent = 'Enviando…';
+  try {
+    if (CONFIG.FORM_ENDPOINT) {
+      const ctl = new AbortController(), to = setTimeout(() => ctl.abort(), 12000);
+      const r = await fetch(CONFIG.FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=UTF-8' }, body: JSON.stringify(data), signal: ctl.signal });
+      clearTimeout(to); if (!r.ok) throw new Error(r.status);
+    } else if (CONFIG.email) {
+      location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent('Solicitud de diagnóstico · ' + data.empresa)}&body=${encodeURIComponent(Object.entries(data).map(([k, v]) => `${k}: ${v}`).join('\n'))}`;
+    } else console.info('[Formulario de prueba] Sin FORM_ENDPOINT. Datos:', data);
+    $('#f-body').hidden = true; $('#f-done').hidden = false; $('#f-done').focus();
+  } catch (err) {
+    const n = $('#f-note'); n.textContent = 'No pudimos enviar la solicitud. Probá de nuevo o escribinos por WhatsApp.'; n.style.color = '#ff8a65';
+  } finally { btn.disabled = false; $('#f-send-t').textContent = 'Enviar solicitud'; }
+});
+
+/* =========================================================
+   AGENDA (Google Calendar en ventana emergente)
+   ========================================================= */
+const agm = $('#agm'); let agFrom = null;
+function openAgenda(e) {
+  agFrom = e.currentTarget; menu.classList.remove('open'); burger.setAttribute('aria-expanded', false);
+  $('#agm-body').innerHTML = CONFIG.AGENDA_URL
+    ? `<iframe src="${CONFIG.AGENDA_URL}" title="Agenda de llamadas"></iframe>`
+    : `<p>Videollamada para entender tu planta y proponerte un alcance. La agenda online se conecta en breve: mientras tanto, dejanos tus datos y coordinamos el horario.</p><a class="btn shiny btn-sm" href="#contacto" data-close style="margin-top:20px">Ir al formulario <span class="arr">→</span></a>`;
+  agm.hidden = false; document.body.style.overflow = 'hidden'; $('.mclose', agm).focus();
+}
+function closeAgenda() { if (agm.hidden) return; agm.hidden = true; document.body.style.overflow = ''; if (agFrom) agFrom.focus(); }
+document.addEventListener('click', e => { const b = e.target.closest('[data-agenda]'); if (b) openAgenda({ currentTarget: b }); });
+agm.addEventListener('click', e => { if (e.target === agm || e.target.closest('[data-close]')) closeAgenda(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeAgenda(); });
+</script>
+</body>
+</html>

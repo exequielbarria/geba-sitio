@@ -1,0 +1,15 @@
+# Copias de trabajo de versiones anteriores (quedan solo en la PC)
+index-v*.html
+logos.html
+
+# Archivos personales o de clientes que no forman parte del sitio
+*.xlsx
+~$*
+Imagenes/WhatsApp*
+Imagenes/logo-referencia.png
+
+# Imagen de referencia de terceros (Freepik): no se publica, el logo propio es Logo/geba-logo.svg
+Logo/*.avif
+
+# Herramientas locales de desarrollo
+.claude/
